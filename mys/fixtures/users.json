@@ -9,5 +9,185 @@
             "phone": "123456789",
             "address": "Calle 123"
     }
-    }
+    },
+    {
+        "model": "mys.Shop",
+        "pk": 0,
+        "fields": {
+            "name": "Paris",
+            "address": "Av. Providencia 123",
+            "phone": "123456789",
+            "email": "paris@paris.cl"
+        }
+    },
+    {
+        "model": "mys.Shop",
+        "pk" : 1,
+        "fields": {
+            "name": "Falabella",
+            "address": "Av. Providencia 123",
+            "phone": "123456789",
+            "email": "falabella@falabella.cl"
+        }
+    },
+    
+        {
+          "model": "mys.Product",
+          "pk": 1,
+          "fields": {
+            "descripcion": "Jeans Wide Leg Tiro Alto Mujer",
+            "precio_actual": 23990.0,
+            "precio_anterior": 34990.0,
+            "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883189780_1/width=240,height=240,quality=70,format=webp,fit=pad",
+            "marca": "BASEMENT",
+            "vendedor": 1
+          }
+        },
+        {
+          "model": "mys.Product",
+          "pk": 2,
+          "fields": {
+            "descripcion": "Blusa Manga Larga Algodón Mujer",
+            "precio_actual": 24990.0,
+            "precio_anterior": null,
+            "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883179617_1/width=240,height=240,quality=70,format=webp,fit=pad",
+            "marca": "BASEMENT",
+            "vendedor": 1
+          }
+        },
+        {
+          "model": "mys.Product",
+          "pk": 3,
+          "fields": {
+            "descripcion": "Polera Mujer",
+            "precio_actual": 8990.0,
+            "precio_anterior": 12990.0,
+            "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883173128_1/width=240,height=240,quality=70,format=webp,fit=pad",
+            "marca": "BASEMENT",
+            "vendedor": 1
+          }
+        },
+        {
+          "model": "mys.Product",
+          "pk": 4,
+          "fields": {
+            "descripcion": "Vestido Corto Mujer",
+            "precio_actual": 24990.0,
+            "precio_anterior": null,
+            "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883179479_1/width=240,height=240,quality=70,format=webp,fit=pad",
+            "marca": "BASEMENT",
+            "vendedor": 1
+          }
+        },
+        {
+          "model": "mys.Product",
+          "pk": 5,
+          "fields": {
+            "descripcion": "Chaleco Vest Mujer",
+            "precio_actual": 9990.0,
+            "precio_anterior": 19990.0,
+            "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883225515_1/width=240,height=240,quality=70,format=webp,fit=pad",
+            "marca": "BASEMENT",
+            "vendedor": 1
+          }
+        },
+        {
+          "model": "mys.Product",
+          "pk": 6,
+          "fields": {
+            "descripcion": "Chaqueta Vest Mujer",
+            "precio_actual": 29990.0,
+            "precio_anterior": null,
+            "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883180214_1/width=240,height=240,quality=70,format=webp,fit=pad",
+            "marca": "BASEMENT",
+            "vendedor": 1
+          }
+        },
+        {
+          "model": "mys.Product",
+          "pk": 7,
+          "fields": {
+            "descripcion": "Blusa Manga Larga Algodón Mujer",
+            "precio_actual": 23990.0,
+            "precio_anterior": 34990.0,
+            "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883180156_1/width=240,height=240,quality=70,format=webp,fit=pad",
+            "marca": "BASEMENT",
+            "vendedor": 1
+          }
+        },
+        {
+          "model": "mys.Product",
+          "pk": 8,
+          "fields": {
+            "descripcion": "Vestido Largo Lyocell Mujer",
+            "precio_actual": 34990.0,
+            "precio_anterior": null,
+            "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883176212_1/width=240,height=240,quality=70,format=webp,fit=pad",
+            "marca": "BASEMENT",
+            "vendedor": 1
+          }
+        },
+        {
+          "model": "mys.Product",
+          "pk": 9,
+          "fields": {
+            "descripcion": "Vestido Midi Mujer",
+            "precio_actual": 27990.0,
+            "precio_anterior": 39990.0,
+            "imagen_url": null,
+            "marca": "BASEMENT",
+            "vendedor": 1
+          }
+        },
+        {
+          "model": "mys.Product",
+          "pk": 10,
+          "fields": {
+            "descripcion": "Blusa Broderie Manga Corta Algodón Mujer",
+            "precio_actual": 23990.0,
+            "precio_anterior": 34990.0,
+            "imagen_url": null,
+            "marca": "BASEMENT",
+            "vendedor": 1
+          }
+        },
+        {
+          "model": "mys.Product",
+          "pk": 11,
+          "fields": {
+            "descripcion": "Blusa Manga Larga Mujer",
+            "precio_actual": 20990.0,
+            "precio_anterior": 29990.0,
+            "imagen_url": null,
+            "marca": "BASEMENT",
+            "vendedor": 1
+          }
+        },
+        {
+          "model": "mys.Product",
+          "pk": 12,
+          "fields": {
+            "descripcion": "Chaqueta Vest Lino Mujer",
+            "precio_actual": 23990.0,
+            "precio_anterior": 34990.0,
+            "imagen_url": null,
+            "marca": "BASEMENT",
+            "vendedor": 1
+          }
+        },
+        {
+          "model": "mys.Product",
+          "pk": 13,
+          "fields": {
+            "descripcion": "Blazer Vest Lino Mujer",
+            "precio_actual": 27990.0,
+            "precio_anterior": 39990.0,
+            "imagen_url": null,
+            "marca": "BASEMENT",
+            "vendedor": 1
+          }
+        }
+      
 ]
+
+

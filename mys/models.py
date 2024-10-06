@@ -22,18 +22,29 @@ class Shop(models.Model):
         return self.name
 
 class Product(models.Model):
-    name = models.CharField(max_length=50)
-    price = models.FloatField()
-    SIZES = ['S', 'M', 'L', 'XL', 'XXL']
-    size = models.CharField(max_length=3, choices=[(size, size) for size in SIZES])
-    category = models.CharField(max_length=50)
-    description = models.TextField()
-    image = models.ImageField(upload_to='images/')
-    stock = models.IntegerField()
-    shop = models.ForeignKey(Shop, on_delete=models.CASCADE)
+    descripcion = models.TextField(verbose_name="Descripción", null=True, blank=True)
+    precio_actual = models.FloatField(verbose_name="Precio Actual", null=True, blank=True)
+    precio_anterior = models.FloatField(verbose_name="Precio Anterior", null=True, blank=True)
+    imagen_url = models.URLField(verbose_name="Imagen URL", null=True, blank=True)
+    marca = models.CharField(max_length=100, verbose_name="Marca", null=True, blank=True)
+    vendedor = models.ForeignKey(Shop, on_delete=models.CASCADE, verbose_name="Vendedor", null=True, blank=True)
+    SIZES = ['XS', 'S', 'M', 'L', 'XL']
+    size = models.CharField(
+        max_length=3,
+        choices=[(size, size) for size in SIZES],
+        null=True,
+        blank=True,
+        verbose_name="Tamaño"
+    )
+    category = models.CharField(
+        max_length=50,
+        null=True,
+        blank=True,
+        verbose_name="Categoría"
+    )
 
     def __str__(self):
-        return self.name
+        return f"{self.marca} - {self.descripcion}"
 
 class MatchUserProduct(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)

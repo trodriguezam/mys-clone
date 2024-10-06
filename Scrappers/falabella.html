@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falabella Product Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .grid-pod {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .pod {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .pod:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .pod img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .pod-details {
+            margin-top: 10px;
+        }
+        .title1 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .pod-subTitle {
+            font-size: 16px;
+            color: #666;
+        }
+        .prices {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #EB0029;
+            font-weight: bold;
+        }
+        .discount-badge {
+            background-color: #EB0029;
+            color: #ffffff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            display: inline-block;
+            margin-top: 5px;
+        }
+        .button {
+            margin-top: 10px;
+            background-color: #005bac;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .button:hover {
+            background-color: #004a9c;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-pod">
+        <!-- Product Item -->
+        <a href="" class="pod" role="button" tabindex="0">
+            <div class="pod-head">
+                <img src="https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883189780_1/width=240,height=240,quality=70,format=webp,fit=pad" alt="BASEMENT - Jeans Wide Leg Tiro Alto Mujer">
+            </div>
+            <div class="pod-details">
+                <div><b class="title1">BASEMENT</b></div>
+                <b class="pod-subTitle">Jeans Wide Leg Tiro Alto Mujer</b>
+                <div class="prices">$23.990 <span class="discount-badge">-31%</span></div>
+                <button class="button">Agregar al Carro</button>
+            </div>
+        </a>
+        <!-- End Product Item -->
+    </div>
+</body>
+</html>
