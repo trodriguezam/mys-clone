@@ -1,0 +1,28 @@
+.top-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: lightblue;
+    color: white;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    margin-top: 0px;
+}
+
+.top-header h1 {
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+.login-logout-btn {
+    background-color: white;
+    color: lightblue;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-left: auto;
+}

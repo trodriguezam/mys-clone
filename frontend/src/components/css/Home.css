@@ -3,8 +3,13 @@ body {
     margin: 0;
     padding: 20px;
     background-color: #f4f4f4;
-}
-.grid-pod {
+  }
+
+  h1 {
+    display: center;
+  }
+  
+  .grid-pod {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 20px;
@@ -12,8 +17,9 @@ body {
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-.pod {
+  }
+  
+  .pod {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,53 +29,90 @@ body {
     border: 1px solid #eaeaea;
     border-radius: 8px;
     transition: transform 0.2s ease-in-out;
-}
-.pod:hover {
+  }
+  
+  .pod:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-.pod img {
+  }
+  
+  .pod img {
     width: 100%;
     height: auto;
     border-radius: 8px;
-}
-.pod-details {
+  }
+  
+  .pod-details {
     margin-top: 10px;
-}
-.title1 {
+  }
+  
+  .title1, .pod-subTitle {
     font-size: 18px;
-    font-weight: bold;
     color: #333;
-}
-.pod-subTitle {
+  }
+  
+  .pod-subTitle {
     font-size: 16px;
     color: #666;
-}
-.prices {
+  }
+  
+  .prices {
     margin-top: 10px;
     font-size: 16px;
     color: #EB0029;
     font-weight: bold;
-}
-.discount-badge {
+  }
+  
+  .discount-badge {
     background-color: #EB0029;
     color: #ffffff;
     padding: 2px 8px;
     border-radius: 4px;
     font-size: 14px;
     display: inline-block;
-    margin-top: 5px;
-}
-.button {
+    margin-left: 10px; /* Ajustado para alinear con el texto de precios */
+  }
+  
+  .button {
     margin-top: 10px;
-    background-color: #005bac;
+    background-color: #007bff; /* Ajustado para unificar con el estilo de .info-wrapper */
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.2s ease-in-out;
-}
-.button:hover {
-    background-color: #004a9c;
-}
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .info-wrapper {
+    display: flex;
+    flex-direction: column; /* Cambiado a column para alinear verticalmente */
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 10px auto; /* Ajustado para centrar dentro del carrusel */
+    max-width: 300px; /* Ajustado según el diseño del carrusel */
+  }
+
+  .animation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 48px;
+    animation: fadeInOut 2s ease forwards;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    75% { opacity: 1; }
+    100% { opacity: 0; }
+  }
