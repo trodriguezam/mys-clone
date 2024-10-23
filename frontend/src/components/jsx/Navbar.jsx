@@ -5,11 +5,11 @@ import '../css/Navbar.css';
 const Navbar = () => {
   return (
     <div className="navbar">
-      <a href="" className="nav-item">
+      <a href="/" className="nav-item">
         <FaHome className="icon" />
         <span>Home</span>
       </a>
-      <a href="" className="nav-item">
+      <a href="/matches" className="nav-item">
         <FaShoppingCart className="icon" />
         <span>Cart</span>
       </a>
