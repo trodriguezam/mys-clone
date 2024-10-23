@@ -2,6 +2,8 @@ from django.shortcuts import render
 from .models import User, Shop, Product, MatchUserProduct
 from .serializers import UserSerializer, ShopSerializer, ProductSerializer, MatchUserProductSerializer
 from rest_framework import generics
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.authtoken.models import Token
 
 class UserListCreate(generics.ListCreateAPIView):
     queryset = User.objects.all()
