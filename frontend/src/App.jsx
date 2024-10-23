@@ -4,6 +4,7 @@ import Home from './components/jsx/Home.jsx';
 import Navbar from './components/jsx/Navbar.jsx';
 import Top from './components/jsx/Top.jsx';
 import Matches from './components/jsx/Matches.jsx';
+import SignUp from './components/jsx/SignUp.jsx';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/matches" element={<Matches />} />
+        <Route path="/signup" element={< SignUp/>} />
         <Route path="*" element={<div><h1>Page Not Found</h1></div>} />
       </Routes>
       <Navbar />
