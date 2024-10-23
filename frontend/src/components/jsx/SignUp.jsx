@@ -21,17 +21,14 @@ const theme = createTheme({
 });
 
 const validationSchema = yup.object({
-  first_name: yup.string().required('First name is required'),
-  last_name: yup.string().required('Last name is required'),
-  handle: yup.string().required('Handle is required'),
-  email: yup.string().email('Invalid email').required('Email is required'),
-  password: yup.string()
-    .matches(/^.{6,}$/, 'The password must be at least 6 characters')
-    .required('Password is required'),
-  password_confirmation: yup.string()
-    .oneOf([yup.ref('password'), null], 'Passwords must match')
-    .required('Confirm password is required'),
-});
+    username: yup.string().required('Username is required'),
+    email: yup.string().email('Invalid email').required('Email is required'),
+    phone: yup.string().required('Phone number is required'),
+    address: yup.string().required('Address is required'),
+    password: yup.string()
+      .matches(/^.{6,}$/, 'The password must be at least 6 characters')
+      .required('Password is required'),
+  });
 
 function SignupForm({ setCurrentUser }) {
   const navigate = useNavigate();
@@ -45,7 +42,7 @@ function SignupForm({ setCurrentUser }) {
             Sign Up
           </Typography>
           <Formik
-            initialValues={{ first_name: '', last_name: '', handle: '', email: '', password: '', password_confirmation: '' }}
+            initialValues={{ username: '', email: '', phone: '', address: '', password: ''}}
             validationSchema={validationSchema}
             onSubmit={(values, { setSubmitting, isValid, validateForm }) => {
               validateForm().then(errors => {
@@ -53,11 +50,13 @@ function SignupForm({ setCurrentUser }) {
                   alert('Please correct the errors before submitting.');
                 } else {
                   alert('User created successfully'); 
-                  const user = {"user": values}
-                  axiosInstance.post('/signup', user)
-                  .then(() => {
-                    navigate('/login');
-                  })
+                  axiosInstance.post('/users/', values)
+                    .then((response) => {
+                        navigate('/');
+                    })
+                    .catch((error) => {
+                      console.error(error);
+                    });
                 }
                 setSubmitting(false);
               });
@@ -66,9 +65,9 @@ function SignupForm({ setCurrentUser }) {
             <Form>
               <Field
                 as={TextField}
-                name="first_name"
+                name="username"
                 type="text"
-                label="First Name"
+                label="Username"
                 fullWidth
                 margin="normal"
                 sx={{
@@ -101,91 +100,13 @@ function SignupForm({ setCurrentUser }) {
                 }}
               />
               <Typography color='black'>
-              <ErrorMessage name="first_name" component="div" />
-              </Typography>
-              <Field
-                as={TextField}
-                name="last_name"
-                type="text"
-                label="Last Name"
-                fullWidth
-                margin="normal"
-                sx={{
-                  '& .MuiOutlinedInput-root': {
-                    '& fieldset': {
-                      borderColor: 'black', // Border color
-                    },
-                    '&:hover fieldset': {
-                      borderColor: '#51bdb6', // Border color on hover
-                    },
-                    '&.Mui-focused fieldset': {
-                      borderColor: '#51bdb6', // Border color when focused
-                    },
-                  },
-                  '& .MuiInputLabel-root': {
-                    color: 'black', // Label color
-                  },
-                  '& .MuiInputLabel-root.Mui-focused': {
-                    color: '#51bdb6', // Label color when focused
-                  },
-                  '& .MuiOutlinedInput-input': {
-                    color: 'black', // Text color
-                  },
-                }}
-                InputLabelProps={{
-                  style: { color: 'black' }, // Initial label color
-                }}
-                InputProps={{
-                  style: { color: 'black' }, // Initial text color
-                }}
-              />
-              <Typography color='black'>
-              <ErrorMessage name="last_name" component="div" />
-              </Typography>
-              <Field
-                as={TextField}
-                name="handle"
-                type="text"
-                label="Handle"
-                fullWidth
-                margin="normal"
-                sx={{
-                  '& .MuiOutlinedInput-root': {
-                    '& fieldset': {
-                      borderColor: 'black', // Border color
-                    },
-                    '&:hover fieldset': {
-                      borderColor: '#51bdb6', // Border color on hover
-                    },
-                    '&.Mui-focused fieldset': {
-                      borderColor: '#51bdb6', // Border color when focused
-                    },
-                  },
-                  '& .MuiInputLabel-root': {
-                    color: 'black', // Label color
-                  },
-                  '& .MuiInputLabel-root.Mui-focused': {
-                    color: '#51bdb6', // Label color when focused
-                  },
-                  '& .MuiOutlinedInput-input': {
-                    color: 'black', // Text color
-                  },
-                }}
-                InputLabelProps={{
-                  style: { color: 'black' }, // Initial label color
-                }}
-                InputProps={{
-                  style: { color: 'black' }, // Initial text color
-                }}
-              />
-              <Typography color='black'>
-              <ErrorMessage name="handle" component="div" />
+              <ErrorMessage name="username" component="div" />
               </Typography>
               <Field
                 as={TextField}
                 name="email"
                 type="email"
-                label="Enter Email"
+                label="Email"
                 fullWidth
                 margin="normal"
                 sx={{
@@ -222,9 +143,87 @@ function SignupForm({ setCurrentUser }) {
               </Typography>
               <Field
                 as={TextField}
+                name="phone"
+                type="text"
+                label="Phone"
+                fullWidth
+                margin="normal"
+                sx={{
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: 'black', // Border color
+                    },
+                    '&:hover fieldset': {
+                      borderColor: '#51bdb6', // Border color on hover
+                    },
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#51bdb6', // Border color when focused
+                    },
+                  },
+                  '& .MuiInputLabel-root': {
+                    color: 'black', // Label color
+                  },
+                  '& .MuiInputLabel-root.Mui-focused': {
+                    color: '#51bdb6', // Label color when focused
+                  },
+                  '& .MuiOutlinedInput-input': {
+                    color: 'black', // Text color
+                  },
+                }}
+                InputLabelProps={{
+                  style: { color: 'black' }, // Initial label color
+                }}
+                InputProps={{
+                  style: { color: 'black' }, // Initial text color
+                }}
+              />
+              <Typography color='black'>
+              <ErrorMessage name="phone" component="div" />
+              </Typography>
+              <Field
+                as={TextField}
+                name="address"
+                type="text"
+                label="Address"
+                fullWidth
+                margin="normal"
+                sx={{
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: 'black', // Border color
+                    },
+                    '&:hover fieldset': {
+                      borderColor: '#51bdb6', // Border color on hover
+                    },
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#51bdb6', // Border color when focused
+                    },
+                  },
+                  '& .MuiInputLabel-root': {
+                    color: 'black', // Label color
+                  },
+                  '& .MuiInputLabel-root.Mui-focused': {
+                    color: '#51bdb6', // Label color when focused
+                  },
+                  '& .MuiOutlinedInput-input': {
+                    color: 'black', // Text color
+                  },
+                }}
+                InputLabelProps={{
+                  style: { color: 'black' }, // Initial label color
+                }}
+                InputProps={{
+                  style: { color: 'black' }, // Initial text color
+                }}
+              />
+              <Typography color='black'>
+              <ErrorMessage name="address" component="div" />
+              </Typography>
+              <Field
+                as={TextField}
                 name="password"
                 type="password"
-                label="Enter Password"
+                label="Password"
                 fullWidth
                 margin="normal"
                 sx={{
@@ -258,45 +257,6 @@ function SignupForm({ setCurrentUser }) {
               />
               <Typography color='black'>
               <ErrorMessage name="password" component="div" />
-              </Typography>
-              <Field
-                as={TextField}
-                name="password_confirmation"
-                type="password"
-                label="Confirm Password"
-                fullWidth
-                margin="normal"
-                sx={{
-                  '& .MuiOutlinedInput-root': {
-                    '& fieldset': {
-                      borderColor: 'black', // Border color
-                    },
-                    '&:hover fieldset': {
-                      borderColor: '#51bdb6', // Border color on hover
-                    },
-                    '&.Mui-focused fieldset': {
-                      borderColor: '#51bdb6', // Border color when focused
-                    },
-                  },
-                  '& .MuiInputLabel-root': {
-                    color: 'black', // Label color
-                  },
-                  '& .MuiInputLabel-root.Mui-focused': {
-                    color: '#51bdb6', // Label color when focused
-                  },
-                  '& .MuiOutlinedInput-input': {
-                    color: 'black', // Text color
-                  },
-                }}
-                InputLabelProps={{
-                  style: { color: 'black' }, // Initial label color
-                }}
-                InputProps={{
-                  style: { color: 'black' }, // Initial text color
-                }}
-              />
-              <Typography color='black'>
-              <ErrorMessage name="password_confirmation" component="div" />
               </Typography>
               <Button type="submit" sx={{ backgroundColor: 'black', '&:hover': { backgroundColor: '#51bdb6' }, mt: 2 }} variant="contained" fullWidth>
                 Sign Up
