@@ -7,6 +7,7 @@ function Matches() {
   const [searchTerm, setSearchTerm] = useState('');
   const [matches, setMatches] = useState([]);
   const [products, setProducts] = useState([]);
+  const [productsMatch, setProductsMatch] = useState([]);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const current_user = JSON.parse(localStorage.getItem('current_user'));
@@ -26,7 +27,8 @@ function Matches() {
       // Verifica si data.matches es un array
       if (Array.isArray(data.matches)) {
         const filteredMatches = data.matches.filter(match => 
-          match.name.toLowerCase().includes(searchTerm.toLowerCase())
+          match.user.id === current_user.id && 
+          match.product.toLowerCase().includes(searchTerm.toLowerCase())
         );
         
         console.log('Matches filtrados:', filteredMatches);  // Debug
@@ -50,6 +52,13 @@ function Matches() {
       } catch (error) {
         console.error('Error fetching products:', error);
       }
+    };
+
+    const ProductsMatch = async () => {
+      const matchedProducts = products.filter(product => 
+        matches.some(match => match.product_id === product.id)
+      );
+      setProductsMatch(matchedProducts);
     };
 
     fetchProducts();
@@ -134,14 +143,30 @@ function Matches() {
           <Paper elevation={3} sx={{ backgroundColor: '#fff', fontFamily: "Montserrat, sans-serif", overflowY: 'auto', maxHeight: '70vh', padding: '10px' }}>
             <List>
               {loading && <Typography>Loading...</Typography>}
-              {!loading && matches.length === 0 && <Typography>No matches found.</Typography>}
-              {matches.map((match) => (
-                <React.Fragment key={match.id}>
-                  <ListItem>
-                    <ListItemText
-                      primary={match.name}
+              {!loading && productsMatch.length === 0 && <Typography>No matches found.</Typography>}
+              {productsMatch.map((product) => (
+                <React.Fragment key={product.id}>
+                  <ListItem alignItems="flex-start">
+                    <Avatar
+                      src={product.imagen_url}
+                      alt={product.name}
+                      sx={{ width: 56, height: 56, marginRight: 2 }}
                     />
-                    <Button variant="contained" sx={{ backgroundColor: '#333', '&:hover': { backgroundColor: '#555' }, fontFamily: "Montserrat, sans-serif" }} onClick={() => handleViewClick(match.id)}>
+                    <ListItemText
+                      primary={product.name}
+                      secondary={
+                        <>
+                          <Typography component="span" variant="body2" color="text.primary">
+                            {product.marca}
+                          </Typography>
+                          <br />
+                          <Typography component="span" variant="body2" color="text.secondary">
+                            Size: {product.size}
+                          </Typography>
+                        </>
+                      }
+                    />
+                    <Button variant="contained" sx={{ backgroundColor: '#333', '&:hover': { backgroundColor: '#555' }, fontFamily: "Montserrat, sans-serif" }} onClick={() => handleViewClick(product.id)}>
                       View
                     </Button>
                   </ListItem>
