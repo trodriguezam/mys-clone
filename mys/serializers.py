@@ -20,4 +20,21 @@ class MatchUserProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = MatchUserProduct
         fields = '__all__'
-    
+
+class UserSignupSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True)
+
+    class Meta:
+        model = User
+        fields = ['email', 'username', 'password', 'phone', 'address']
+
+    def create(self, validated_data):
+        user = User.objects.create_user(
+            email=validated_data['email'],
+            username=validated_data['username'],
+            password=validated_data['password'],
+            phone=validated_data['phone'],
+            address=validated_data['address']
+        )
+        
+        return user

@@ -1,66 +1,62 @@
-import { useState } from 'react';
-import axiosInstance from '../PageElements/axiosInstance.jsx';
+import React from 'react';
+import { Box, Typography, TextField, CssBaseline, Button } from '@mui/material';
+import { ThemeProvider, createTheme } from '@mui/system';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { TextField, Button, CssBaseline, ThemeProvider, createTheme, Typography } from '@mui/material';
 import * as yup from 'yup';
 import { useNavigate } from 'react-router-dom';
-import { Box } from '@mui/system';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#666666',  // Example for primary color (green)
-    },
-    secondary: {
-      main: '#FF5722',  // Example for secondary color (orange)
-    },
-    text: {
-      primary: '#111111',  // Custom text color
-    }
-  },
-});
 
 const validationSchema = yup.object({
-    username: yup.string().required('Username is required'),
-    email: yup.string().email('Invalid email').required('Email is required'),
-    phone: yup.string().required('Phone number is required'),
-    address: yup.string().required('Address is required'),
-    password: yup.string()
-      .matches(/^.{6,}$/, 'The password must be at least 6 characters')
-      .required('Password is required'),
-  });
+  username: yup.string().required('Username is required'),
+  email: yup.string().email('Enter a valid email').required('Email is required'),
+  phone: yup.string().required('Phone is required'),
+  address: yup.string().required('Address is required'),
+  password: yup.string()
+    .matches(/^.{6,}$/, 'The password must be at least 6 characters')
+    .required('Password is required'),
+});
 
-function SignupForm({ setCurrentUser }) {
+
+const SignUp = () => {
   const navigate = useNavigate();
+
+  
+
+  const handleSignup = async (values) => {
+    console.log("Signup values:", values); 
+    try {
+      const response = await fetch('http://localhost:8000/api/signup/', { 
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log("Signup successful:", data);
+      localStorage.setItem('token', data.token);
+      navigate('/home');
+    } catch (error) {
+      console.error("Error during signup:", error);
+    }
+  };
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', padding: '70px 0' }}>
-      <ThemeProvider theme={theme}>
+
         <CssBaseline />
         <Box sx={{ width: '100%', maxWidth: '400px', padding: '20px', backgroundColor: 'lightblue', borderRadius: '8px', boxShadow: '0 0 10px rgba(0,0,0,0.1)' }}>
           <Typography variant="h4" sx={{ color: 'black', mb: 2, textAlign: 'center' }}>
             Sign Up
           </Typography>
           <Formik
-            initialValues={{ username: '', email: '', phone: '', address: '', password: ''}}
+            initialValues={{ username: '', email: '', phone: '', address: '', password: '' }}
             validationSchema={validationSchema}
-            onSubmit={(values, { setSubmitting, isValid, validateForm }) => {
-              validateForm().then(errors => {
-                if (Object.keys(errors).length) {
-                  alert('Please correct the errors before submitting.');
-                } else {
-                  alert('User created successfully'); 
-                  axiosInstance.post('/users/', values)
-                    .then((response) => {
-                        navigate('/');
-                    })
-                    .catch((error) => {
-                      console.error(error);
-                    });
-                }
-                setSubmitting(false);
-              });
-            }}
+            onSubmit={handleSignup}
           >
             <Form>
               <Field
@@ -100,7 +96,7 @@ function SignupForm({ setCurrentUser }) {
                 }}
               />
               <Typography color='black'>
-              <ErrorMessage name="username" component="div" />
+                <ErrorMessage name="username" component="div" />
               </Typography>
               <Field
                 as={TextField}
@@ -139,7 +135,7 @@ function SignupForm({ setCurrentUser }) {
                 }}
               />
               <Typography color='black'>
-              <ErrorMessage name="email" component="div" />
+                <ErrorMessage name="email" component="div" />
               </Typography>
               <Field
                 as={TextField}
@@ -178,7 +174,7 @@ function SignupForm({ setCurrentUser }) {
                 }}
               />
               <Typography color='black'>
-              <ErrorMessage name="phone" component="div" />
+                <ErrorMessage name="phone" component="div" />
               </Typography>
               <Field
                 as={TextField}
@@ -217,7 +213,7 @@ function SignupForm({ setCurrentUser }) {
                 }}
               />
               <Typography color='black'>
-              <ErrorMessage name="address" component="div" />
+                <ErrorMessage name="address" component="div" />
               </Typography>
               <Field
                 as={TextField}
@@ -256,7 +252,7 @@ function SignupForm({ setCurrentUser }) {
                 }}
               />
               <Typography color='black'>
-              <ErrorMessage name="password" component="div" />
+                <ErrorMessage name="password" component="div" />
               </Typography>
               <Button type="submit" sx={{ backgroundColor: 'black', '&:hover': { backgroundColor: '#51bdb6' }, mt: 2 }} variant="contained" fullWidth>
                 Sign Up
@@ -264,9 +260,8 @@ function SignupForm({ setCurrentUser }) {
             </Form>
           </Formik>
         </Box>
-      </ThemeProvider>
     </Box>
   );
-}
+};
 
-export default SignupForm;
+export default SignUp;

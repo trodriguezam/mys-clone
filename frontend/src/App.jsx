@@ -11,9 +11,9 @@ function App() {
     <Router>
       <Top />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={< SignUp/>} />
         <Route path="/matches" element={<Matches />} />
-        <Route path="/signup" element={< SignUp/>} />
+        <Route path="/home" element={<Home />} />
         <Route path="*" element={<div><h1>Page Not Found</h1></div>} />
       </Routes>
       <Navbar />
