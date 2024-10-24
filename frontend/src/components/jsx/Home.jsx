@@ -41,9 +41,6 @@ const Home = () => {
   
   const handleSwipe = (index) => {
     setSwipeDirection(index > activeStep ? 'right' : 'left');
-    if (swipeDirection === 'left') {
-      handleMatch();
-    }
     setActiveStep(index);
   };
 
