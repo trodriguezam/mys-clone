@@ -23,6 +23,8 @@ class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=50, unique=True)
     phone = models.CharField(max_length=50, null=True, blank=True)
     address = models.CharField(max_length=50, null=True, blank=True)
+    groups = models.ManyToManyField(Group, related_name='custom_user_set')
+    user_permissions = models.ManyToManyField(Permission, related_name='custom_user_set')
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 

@@ -11,66 +11,67 @@ function Matches() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const current_user = JSON.parse(localStorage.getItem('current_user'));
+  const ID = 1;  // Cambiar el 1 por el current_user.id
 
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const isMediumScreen = useMediaQuery(theme.breakpoints.down('md'));
 
-  const handleSearchMatch = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch(`http://localhost:8000/api/match-user-products`);
-      const data = await response.json();
-      
-      console.log('Datos recibidos:', data);  // Debug
-  
-      // Verifica si data.matches es un array
-      if (Array.isArray(data.matches)) {
-        const filteredMatches = data.matches.filter(match => 
-          match.user.id === current_user.id && 
-          match.product.toLowerCase().includes(searchTerm.toLowerCase())
-        );
-        
-        console.log('Matches filtrados:', filteredMatches);  // Debug
-        
-        setMatches(filteredMatches);
-      } else {
-        console.error('Los datos recibidos no contienen un array de matches:', data);
+  useEffect(() => {
+    const fetchMatches = async () => {
+      try {
+        const response = await fetch(`http://localhost:8000/api/match-user-products`);
+        const data = await response.json();
+        setMatches(data);
+        console.log('matches:', data);  // Debug
+      } catch (error) {
+        console.error('Error fetching matches:', error);
       }
-    } catch (error) {
-      console.error('Error fetching matches:', error);
-    }
-    setLoading(false);
-  };
+    };
+
+    fetchMatches();
+  }, []);
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
         const response = await fetch(`http://localhost:8000/api/products`);
         const data = await response.json();
-        setProducts(data.products);
+        setProducts(data);
+        console.log('Products:', data);  // Debug
       } catch (error) {
         console.error('Error fetching products:', error);
       }
     };
 
-    const ProductsMatch = async () => {
-      const matchedProducts = products.filter(product => 
-        matches.some(match => match.product_id === product.id)
-      );
-      setProductsMatch(matchedProducts);
+    fetchProducts();
+  }, []);
+
+  useEffect(() => {
+    const ProductsMatch = () => {
+      let filteredProducts;
+      if (searchTerm.trim() === '') {
+        // Si el campo de búsqueda está vacío, guarda todos los productos que están en matches y coinciden con el current_user
+        filteredProducts = products.filter(product => 
+          matches.some(match => match.product === product.id && match.user === ID) // Cambiar el 1 por el current_user
+        );
+      } else {
+        // Filtra los productos según la categoría y que están en matches y coinciden con el current_user
+        filteredProducts = products.filter(product => 
+          matches.some(match => match.product === product.id && match.user === ID) && // Cambiar el 1 por el current_user
+          product.marca.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+      }
+      console.log('Filtered products:', filteredProducts);  // Debug
+      setProductsMatch(filteredProducts);
     };
 
-    fetchProducts();
-    handleSearchMatch();
-  }, []);
+    ProductsMatch();
+  }, [products, matches, searchTerm]);
 
   const handleChange = (event) => {
     setSearchTerm(event.target.value);
   };
-
-  useEffect(() => {
-  }, [matches]);
 
   const handleViewClick = (id) => {
     navigate(`/matches/${id}`);
@@ -78,7 +79,7 @@ function Matches() {
 
   return (
     current_user ? (
-      <Container sx={{ height: '100vh', overflowY: 'auto', marginTop: isSmallScreen ? '30%' : '0', marginTop: isMediumScreen ? "30%" : "0", fontFamily: 'Montserrat, sans-serif' }}>
+      <Container sx={{ height: '100vh', overflowY: 'auto', fontFamily: 'Montserrat, sans-serif' }}>
         <Typography variant="h4" sx={{ fontFamily: "Montserrat, sans-serif", color: "#333" }}>
           Matches
         </Typography>
@@ -135,12 +136,12 @@ function Matches() {
                 },
               }}
             />
-            <IconButton onClick={handleSearchMatch} sx={{ marginLeft: 1, color: '#333' }}>
+            <IconButton onClick={() => setSearchTerm(searchTerm)} sx={{ marginLeft: 1, color: '#333' }}>
               <SearchIcon />
             </IconButton>
           </Box>
 
-          <Paper elevation={3} sx={{ backgroundColor: '#fff', fontFamily: "Montserrat, sans-serif", overflowY: 'auto', maxHeight: '70vh', padding: '10px' }}>
+          <Paper elevation={3} sx={{ backgroundColor: '#fff', fontFamily: "Montserrat, sans-serif", overflowY: 'auto', maxHeight: '70vh', padding: '2px', width: '100%', margin: '0 auto' }}>
             <List>
               {loading && <Typography>Loading...</Typography>}
               {!loading && productsMatch.length === 0 && <Typography>No matches found.</Typography>}
@@ -161,12 +162,12 @@ function Matches() {
                           </Typography>
                           <br />
                           <Typography component="span" variant="body2" color="text.secondary">
-                            Size: {product.size}
+                            Precio: ${product.precio_actual}
                           </Typography>
                         </>
                       }
                     />
-                    <Button variant="contained" sx={{ backgroundColor: '#333', '&:hover': { backgroundColor: '#555' }, fontFamily: "Montserrat, sans-serif" }} onClick={() => handleViewClick(product.id)}>
+                    <Button variant="contained" sx={{ backgroundColor: '#333', '&:hover': { backgroundColor: '#555' }, fontFamily: "Montserrat, sans-serif", backgroundColor: "#add8e6", color: "#000000" }} onClick={() => handleViewClick(product.id)}>
                       View
                     </Button>
                   </ListItem>

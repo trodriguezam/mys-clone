@@ -38,7 +38,7 @@ const SignUp = () => {
 
       const data = await response.json();
       console.log("Signup successful:", data);
-      localStorage.setItem('token', data.token);
+      localStorage.setItem('user', data.user_id);
       navigate('/home');
     } catch (error) {
       console.error("Error during signup:", error);
