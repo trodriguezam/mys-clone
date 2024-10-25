@@ -3,6 +3,10 @@ import '../css/Top.css';
 
 const Top = () => {
   const isLoggedIn = false; 
+  let user = localStorage.getItem('user');
+  if (null) {
+    isLoggedIn = true;
+  }
 
   return (
     <div className="top-header">

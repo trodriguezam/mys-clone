@@ -6,6 +6,7 @@ import Top from './components/jsx/Top.jsx';
 import Matches from './components/jsx/Matches.jsx';
 import SignUp from './components/jsx/SignUp.jsx';
 import Login from './components/jsx/Login.jsx';
+import UserConfig from './components/jsx/userConfig.jsx';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Top />
       <Routes>
         <Route path="/" element={< Login/>} />
+        <Route path="/userconfig" element={< UserConfig/>} />
         <Route path="/signup" element={< SignUp/>} />
         <Route path="/matches" element={<Matches />} />
         <Route path="/home" element={<Home />} />

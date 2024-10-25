@@ -5,7 +5,7 @@ import '../css/Navbar.css';
 const Navbar = () => {
   return (
     <div className="navbar">
-      <a href="/" className="nav-item">
+      <a href="/home" className="nav-item">
         <FaHome className="icon" />
         <span>Home</span>
       </a>
@@ -13,7 +13,7 @@ const Navbar = () => {
         <FaHeart className="icon" />
         <span>Matches</span>
       </a>
-      <a href="" className="nav-item">
+      <a href="/userconfig" className="nav-item">
         <FaUser className="icon" />
         <span>User</span>
       </a>
