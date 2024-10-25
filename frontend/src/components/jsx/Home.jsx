@@ -95,7 +95,6 @@ const ProductSwiper = () => {
           <div><b className="title1">{currentProduct.marca}</b></div>
           <b className="pod-subTitle">{currentProduct.descripcion}</b>
           <div className="prices">${currentProduct.precio_actual}</div>
-          <button className="button">Agregar al Carro</button>
         </div>
 
         {animation && (

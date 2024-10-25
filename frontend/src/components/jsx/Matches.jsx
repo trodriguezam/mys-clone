@@ -11,7 +11,7 @@ function Matches() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const current_user = JSON.parse(localStorage.getItem('current_user'));
-  const ID = 1;  // Cambiar el 1 por el current_user.id
+  const ID = parseInt(localStorage.getItem('user'), 10);
 
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
@@ -144,7 +144,7 @@ function Matches() {
           <Paper elevation={3} sx={{ backgroundColor: '#fff', fontFamily: "Montserrat, sans-serif", overflowY: 'auto', maxHeight: '70vh', padding: '2px', width: '100%', margin: '0 auto' }}>
             <List>
               {loading && <Typography>Loading...</Typography>}
-              {!loading && productsMatch.length === 0 && <Typography>No matches found.</Typography>}
+              {!loading && productsMatch.length === 0 && <Typography>No products found.</Typography>}
               {productsMatch.map((product) => (
                 <React.Fragment key={product.id}>
                   <ListItem alignItems="flex-start">
