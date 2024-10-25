@@ -74,7 +74,7 @@ function Matches() {
   };
 
   const handleViewClick = (id) => {
-    navigate(`/matches/${id}`);
+    navigate(`/matches`);
   };
 
   return (
