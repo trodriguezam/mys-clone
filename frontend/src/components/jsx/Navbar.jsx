@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaHome, FaShoppingCart, FaUser, FaCog } from 'react-icons/fa';
+import { FaHome, FaUser, FaCog, FaHeart } from 'react-icons/fa';
 import '../css/Navbar.css'; 
 
 const Navbar = () => {
@@ -10,8 +10,8 @@ const Navbar = () => {
         <span>Home</span>
       </a>
       <a href="/matches" className="nav-item">
-        <FaShoppingCart className="icon" />
-        <span>Cart</span>
+        <FaHeart className="icon" />
+        <span>Matches</span>
       </a>
       <a href="/userconfig" className="nav-item">
         <FaUser className="icon" />

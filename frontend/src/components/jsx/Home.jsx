@@ -1,88 +1,127 @@
 import React, { useState, useEffect } from 'react';
-import SwipeableViews from 'react-swipeable-views';
-import "../css/Home.css";
+import '../css/Home.css'; 
+import axiosInstance from '../PageElements/axiosInstance';
 
-const Home = () => {
+const ProductSwiper = () => {
   const [products, setProducts] = useState([]);
-  const [activeStep, setActiveStep] = useState(0); 
-  const [swipeDirection, setSwipeDirection] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [dragStart, setDragStart] = useState(null);
+  const [offset, setOffset] = useState(0);
+  const [animation, setAnimation] = useState(null);
 
   useEffect(() => {
     fetchProducts();
   }, []);
-
   
   const fetchProducts = async () => {
     try {
       const response = await fetch('http://localhost:8000/api/products');
-      const data = await response.json();
+      let data = await response.json();
+      data = data.sort(() => Math.random() - 0.5);
       setProducts(data);
     } catch (error) {
-      console.error("Error al obtener los usuarios:", error);
+      console.error("Error fetching products:", error);
     }
   };
-  const handleMatch = async () => {
-    try {
-      const response = await fetch('http://localhost:8000/api/match-user-products/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          product_id: products[activeStep].id,
-          user: 1,
-        }),
+  const currentUserId = localStorage.getItem('user');
+
+  const handleMatch = async (productId) => {
+    axiosInstance.post('/match-user-products/', { user: currentUserId, product: productId})
+      .catch((error) => {
+      console.error(error);
       });
-      const data = await response.json();
-      console.log(data);
-    } catch (error) {
-      console.error("Error al hacer match:", error);
-    }
-  }
-  
-  const handleSwipe = (index) => {
-    setSwipeDirection(index > activeStep ? 'right' : 'left');
-    setActiveStep(index);
   };
 
+  const handleDragStart = (e) => {
+    setDragStart(e.clientX);
+  };
+
+  const handleDragMove = (e) => {
+    if (dragStart === null) return;
+    const currentOffset = e.clientX - dragStart;
+    setOffset(currentOffset);
+  };
+
+  const handleDragEnd = () => {
+    if (offset < -100) {
+      handleSwipe('right');
+    } else if (offset > 100) {
+      handleSwipe('left');
+    }
+    setDragStart(null);
+    setOffset(0);
+  };
+
+  const handleSwipe = (direction) => {
+    setAnimation(direction);
+    
+    if (direction === 'left') {
+      handleMatch(products[currentIndex].id);
+    }
+    
+    setTimeout(() => {
+      setAnimation(null);
+      setCurrentIndex((prev) => (prev + 1) % products.length);
+    }, 300);
+  };
+
+  if (products.length === 0) {
+    return <div>Loading...</div>;
+  }
+
+  const currentProduct = products[currentIndex];
 
   return (
-    <div>
-      <div className='product-container'>
-      
-      <SwipeableViews
-        index={activeStep}
-        onChangeIndex={handleSwipe}
-        enableMouseEvents
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '100vh' }}>
+      <div 
+        className="info-wrapper"
+        onMouseDown={handleDragStart}
+        onMouseMove={handleDragMove}
+        onMouseUp={handleDragEnd}
+        onMouseLeave={handleDragEnd}
+        style={{
+          transform: `translateX(${offset}px) rotate(${offset * 0.05}deg)`,
+          transition: dragStart ? 'none' : 'all 0.3s ease',
+        }}
       >
-        {products.map((product, index) => (
-          <div className='info-wrapper'>
-          <div key={index} style={{ padding: 24, textAlign: 'center' }}>
-            <div className="grid-pod">
-              <div className="pod">
-                <div className="pod-head">
-                  <img src={product.imagen_url} alt={product.marca} />
-                </div>
-                
-              </div>
+        <div className="grid-pod">
+          <div className="pod">
+            <div className="pod-head">
+              <img src={currentProduct.imagen_url} alt={currentProduct.marca} />
             </div>
           </div>
-          <div className="pod-details">
-          <div><b className="title1">{product.marca}</b></div>
-          <b className="pod-subTitle">{product.descripcion}</b>
-          <div className="prices">{product.precio_actual}</div>
-          <button className="button">Agregar al Carro</button>
         </div>
+        <div className="pod-details">
+          <div><b className="title1">{currentProduct.marca}</b></div>
+          <b className="pod-subTitle">{currentProduct.descripcion}</b>
+          <div className="prices">${currentProduct.precio_actual}</div>
         </div>
-          
-        ))}
-      </SwipeableViews>
-      {swipeDirection === 'left' && <div className="animation">💚</div>} 
-      {swipeDirection === 'right' && <div className="animation">❌</div>} 
-      
-    </div>
+
+        {animation && (
+          <div className="animation">
+            {animation === 'left' ? '💚' : '❌'}
+          </div>
+        )}
+      </div>
+
+      <div style={{ display: 'flex', gap: '20px', marginTop: '20px' }}>
+        <button
+          onClick={() => handleSwipe('right')}
+          className="button"
+          style={{ backgroundColor: '#dc3545' }}
+        >
+          ✕
+        </button>
+        <button
+          onClick={() => handleSwipe('left')}
+          className="button"
+          style={{ backgroundColor: '#28a745' }}
+        >
+          ♥
+        </button>
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default ProductSwiper;
