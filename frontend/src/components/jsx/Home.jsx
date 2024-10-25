@@ -85,10 +85,8 @@ const ProductSwiper = () => {
         }}
       >
         <div className="grid-pod">
-          <div className="pod">
-            <div className="pod-head">
-              <img src={currentProduct.imagen_url} alt={currentProduct.marca} />
-            </div>
+          <div className="pod-head">
+            <img src={currentProduct.imagen_url} alt={currentProduct.marca} />
           </div>
         </div>
         <div className="pod-details">
