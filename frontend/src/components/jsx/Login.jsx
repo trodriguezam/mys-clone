@@ -146,6 +146,7 @@ const Login = () => {
               <Button type="submit" sx={{ backgroundColor: 'white', '&:hover': { backgroundColor: '#51bdb6' }, mt: 2 }} variant="contained" fullWidth>
                 Login
               </Button>
+              <Button sx={{ color: 'black', '&:hover': { color: '#51bdb6' }, mt: 2 }} variant="text" fullWidth onClick={() => navigate('/signup')}>Sign Up</Button>
             </Form>
           </Formik>
         </Box>
