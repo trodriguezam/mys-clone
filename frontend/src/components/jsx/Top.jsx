@@ -20,7 +20,6 @@ const Top = () => {
       <div className="auth-buttons">
         {isLoggedIn ? (
           <>
-            <div>Welcome, {user}</div>
             <button className="login-logout-btn" onClick={handleLogout}>
               Logout
             </button>
