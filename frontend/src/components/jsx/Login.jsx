@@ -46,6 +46,7 @@ const Login = () => {
       console.log("Login successful:", data);
       localStorage.setItem('user', data.user_id);
       navigate('/home');
+      window.location.reload();
     } catch (error) {
       console.error("Error during login:", error);
     }
