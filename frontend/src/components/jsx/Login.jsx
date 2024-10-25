@@ -46,6 +46,7 @@ const Login = () => {
       console.log("Login successful:", data);
       localStorage.setItem('user', data.user_id);
       navigate('/home');
+      window.location.reload();
     } catch (error) {
       console.error("Error during login:", error);
     }
@@ -56,7 +57,7 @@ const Login = () => {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Box sx={{ width: '100%', maxWidth: '400px', padding: '20px', backgroundColor: '#FFF', borderRadius: '8px', boxShadow: '0 0 10px rgba(0,0,0,0.1)' }}>
-          <Typography variant="h4" sx={{ color: 'white', mb: 2, textAlign: 'center' }}>
+          <Typography variant="h4" sx={{ color: 'black', mb: 2, textAlign: 'center' }}>
             Login
           </Typography>
           <Formik
@@ -143,10 +144,9 @@ const Login = () => {
               <Typography color='black'>
                 <ErrorMessage name="password" component="div" />
               </Typography>
-              <Button type="submit" sx={{ backgroundColor: '#989898', '&:hover': { backgroundColor: '#51bdb6' }, mt: 2 }} variant="contained" fullWidth>
+              <Button type="submit" sx={{ backgroundColor: '#fd7b7b', '&:hover': { backgroundColor: '#51bdb6' }, mt: 2 }} variant="contained" fullWidth>
                 Login
               </Button>
-              <Button sx={{ color: 'black', '&:hover': { color: '#989898' }, mt: 2 }} variant="text" fullWidth onClick={() => navigate('/signup')}>Sign Up</Button>
             </Form>
           </Formik>
         </Box>

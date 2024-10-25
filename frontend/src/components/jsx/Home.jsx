@@ -72,7 +72,7 @@ const ProductSwiper = () => {
   const currentProduct = products[currentIndex];
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '100vh' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '40vh', marginTop: "75px" }}>
       <div 
         className="info-wrapper"
         onMouseDown={handleDragStart}

@@ -78,9 +78,9 @@ function Matches() {
   };
 
   return (
-    current_user ? (
-      <Container sx={{ height: '100vh', overflowY: 'auto', fontFamily: 'Montserrat, sans-serif' }}>
-        <Typography variant="h4" sx={{ fontFamily: "Montserrat, sans-serif", color: "#333" }}>
+    ID ? (
+      <Container sx={{ height: '100vh', overflowY: 'auto', fontFamily: 'Montserrat, sans-serif', marginTop: "4%" }}>
+        <Typography variant="h4" sx={{ fontFamily: "Montserrat, sans-serif", color: "#333", marginBottom: "1%" }}>
           Matches
         </Typography>
         <Box sx={{
@@ -90,14 +90,14 @@ function Matches() {
           boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
           fontFamily: 'Montserrat, sans-serif',
         }}>
-          <Box 
+          <Box
             sx={{
               position: 'sticky',
               top: 0,
               zIndex: 1,
               display: 'flex',
               alignItems: 'center',
-              backgroundColor: '#989898', // Color lightblue
+              // backgroundColor: '#fff', // Color lightblue
               padding: '10px',
               borderRadius: '8px',
               marginBottom: '10px',
@@ -136,7 +136,7 @@ function Matches() {
                 },
               }}
             />
-            <IconButton onClick={() => setSearchTerm(searchTerm)} sx={{ marginLeft: 1, color: '#fff' }}>
+            <IconButton onClick={() => setSearchTerm(searchTerm)} sx={{ marginLeft: 1, color: '#000' }}>
               <SearchIcon />
             </IconButton>
           </Box>

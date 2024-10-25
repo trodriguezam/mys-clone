@@ -36,7 +36,7 @@ function SignupForm({ setCurrentUser }) {
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', padding: '70px 0' }}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Box sx={{ width: '100%', maxWidth: '400px', padding: '20px', backgroundColor: 'lightblue', borderRadius: '8px', boxShadow: '0 0 10px rgba(0,0,0,0.1)' }}>
+        <Box sx={{ width: '100%', maxWidth: '400px', padding: '20px', backgroundColor: 'fff', borderRadius: '8px', boxShadow: '0 0 10px rgba(0,0,0,0.1)' }}>
           <Typography variant="h4" sx={{ color: 'black', mb: 2, textAlign: 'center' }}>
             Sign Up
           </Typography>
@@ -257,7 +257,7 @@ function SignupForm({ setCurrentUser }) {
               <Typography color='black'>
               <ErrorMessage name="password" component="div" />
               </Typography>
-              <Button type="submit" sx={{ backgroundColor: 'black', '&:hover': { backgroundColor: '#51bdb6' }, mt: 2 }} variant="contained" fullWidth>
+              <Button type="submit" sx={{ backgroundColor: '#fd7b7b', '&:hover': { backgroundColor: '#fd7b7b' }, mt: 2 }} variant="contained" fullWidth>
                 Sign Up
               </Button>
             </Form>
