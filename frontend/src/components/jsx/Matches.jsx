@@ -97,7 +97,7 @@ function Matches() {
               zIndex: 1,
               display: 'flex',
               alignItems: 'center',
-              backgroundColor: '#add8e6', // Color lightblue
+              backgroundColor: '#989898', // Color lightblue
               padding: '10px',
               borderRadius: '8px',
               marginBottom: '10px',
@@ -136,7 +136,7 @@ function Matches() {
                 },
               }}
             />
-            <IconButton onClick={() => setSearchTerm(searchTerm)} sx={{ marginLeft: 1, color: '#333' }}>
+            <IconButton onClick={() => setSearchTerm(searchTerm)} sx={{ marginLeft: 1, color: '#fff' }}>
               <SearchIcon />
             </IconButton>
           </Box>
@@ -162,12 +162,12 @@ function Matches() {
                           </Typography>
                           <br />
                           <Typography component="span" variant="body2" color="text.secondary">
-                            Precio: ${product.precio_actual}
+                            ${product.precio_actual}
                           </Typography>
                         </>
                       }
                     />
-                    <Button variant="contained" sx={{ backgroundColor: '#333', '&:hover': { backgroundColor: '#555' }, fontFamily: "Montserrat, sans-serif", backgroundColor: "#add8e6", color: "#000000" }} onClick={() => handleViewClick(product.id)}>
+                    <Button variant="contained" sx={{ '&:hover': { backgroundColor: '#555' }, fontFamily: "Montserrat, sans-serif", backgroundColor: "#fd7b7b", color: "#ffffff" }} onClick={() => handleViewClick(product.id)}>
                       View
                     </Button>
                   </ListItem>

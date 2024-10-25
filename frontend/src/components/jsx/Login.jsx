@@ -8,14 +8,14 @@ import { useNavigate } from 'react-router-dom';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#51bdb6',
+      main: '#fd7b7b', // Color principal del Navbar y Matches
     },
     secondary: {
       main: '#000000',
     },
   },
   typography: {
-    fontFamily: 'Arial, sans-serif',
+    fontFamily: 'Montserrat, sans-serif', // Fuente utilizada en Matches
   },
 });
 
@@ -55,8 +55,8 @@ const Login = () => {
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', padding: '70px 0' }}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Box sx={{ width: '100%', maxWidth: '400px', padding: '20px', backgroundColor: 'lightblue', borderRadius: '8px', boxShadow: '0 0 10px rgba(0,0,0,0.1)' }}>
-          <Typography variant="h4" sx={{ color: 'black', mb: 2, textAlign: 'center' }}>
+        <Box sx={{ width: '100%', maxWidth: '400px', padding: '20px', backgroundColor: '#FFF', borderRadius: '8px', boxShadow: '0 0 10px rgba(0,0,0,0.1)' }}>
+          <Typography variant="h4" sx={{ color: 'white', mb: 2, textAlign: 'center' }}>
             Login
           </Typography>
           <Formik
@@ -78,17 +78,17 @@ const Login = () => {
                       borderColor: 'black', // Border color
                     },
                     '&:hover fieldset': {
-                      borderColor: '#51bdb6', // Border color on hover
+                      borderColor: '#fd7b7b', // Border color on hover
                     },
                     '&.Mui-focused fieldset': {
-                      borderColor: '#51bdb6', // Border color when focused
+                      borderColor: '#fd7b7b', // Border color when focused
                     },
                   },
                   '& .MuiInputLabel-root': {
                     color: 'black', // Label color
                   },
                   '& .MuiInputLabel-root.Mui-focused': {
-                    color: '#51bdb6', // Label color when focused
+                    color: '#fd7b7b', // Label color when focused
                   },
                   '& .MuiOutlinedInput-input': {
                     color: 'black', // Text color
@@ -117,17 +117,17 @@ const Login = () => {
                       borderColor: 'black', // Border color
                     },
                     '&:hover fieldset': {
-                      borderColor: '#51bdb6', // Border color on hover
+                      borderColor: '#fd7b7b', // Border color on hover
                     },
                     '&.Mui-focused fieldset': {
-                      borderColor: '#51bdb6', // Border color when focused
+                      borderColor: '#fd7b7b', // Border color when focused
                     },
                   },
                   '& .MuiInputLabel-root': {
                     color: 'black', // Label color
                   },
                   '& .MuiInputLabel-root.Mui-focused': {
-                    color: '#51bdb6', // Label color when focused
+                    color: '#fd7b7b', // Label color when focused
                   },
                   '& .MuiOutlinedInput-input': {
                     color: 'black', // Text color
@@ -143,10 +143,10 @@ const Login = () => {
               <Typography color='black'>
                 <ErrorMessage name="password" component="div" />
               </Typography>
-              <Button type="submit" sx={{ backgroundColor: 'white', '&:hover': { backgroundColor: '#51bdb6' }, mt: 2 }} variant="contained" fullWidth>
+              <Button type="submit" sx={{ backgroundColor: '#989898', '&:hover': { backgroundColor: '#51bdb6' }, mt: 2 }} variant="contained" fullWidth>
                 Login
               </Button>
-              <Button sx={{ color: 'black', '&:hover': { color: '#51bdb6' }, mt: 2 }} variant="text" fullWidth onClick={() => navigate('/signup')}>Sign Up</Button>
+              <Button sx={{ color: 'black', '&:hover': { color: '#989898' }, mt: 2 }} variant="text" fullWidth onClick={() => navigate('/signup')}>Sign Up</Button>
             </Form>
           </Formik>
         </Box>

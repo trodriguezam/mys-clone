@@ -7,7 +7,7 @@
   left: 0; /* Asegura que la barra de navegación comience desde el borde izquierdo */
   right: 0; /* Asegura que la barra de navegación se extienda hasta el borde derecho */
   width: 100%;
-  background-color: lightblue;
+  background-color: #fd7b7b;
   box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
   padding: 10px 0;
 }
@@ -17,7 +17,7 @@
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .icon {
