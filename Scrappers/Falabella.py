@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # URL del sitio web que deseas hacer scraping
-url = "https://www.falabella.com/falabella-cl/collection/boho?mkid=LA_B1_VER_4418&f.product.brandName=basement"
+url = "https://www.falabella.com/falabella-cl/collection/conjuntosmujer"
 
 # Realizar la solicitud HTTP
 response = requests.get(url)
@@ -42,6 +42,12 @@ if response.status_code == 200:
 
         else:
             descripcion = None
+        
+        enlace = producto.find('a', href=True)
+        if enlace is not None:
+            href = enlace['href']
+        else:
+            href = None
 
         vendedor = producto.find('b', class_='seller-text-rebrand').get_text(strip=True)
         productos[productos_id] = {
@@ -50,7 +56,7 @@ if response.status_code == 200:
             "Precio anterior": precio_anterior,
             "Imagen": url_imagen,
             "Marca": marca,
-            "Vendedor": vendedor
+            "Vendedor": vendedor,
         }
         productos_id += 1
 
@@ -58,5 +64,6 @@ if response.status_code == 200:
         
 else:
     print(f"Error al acceder a la página: {response.status_code}")
-
 print(productos)
+for i in productos:
+    print(i)

@@ -1,0 +1,158 @@
+[
+    {
+      "model": "mys.Product",
+      "pk": 14,
+      "fields": {
+        "descripcion": "Blazer Mujer",
+        "precio_actual": 24990.0,
+        "precio_anterior": null,
+        "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883255809_1/width=240,height=240,quality=70,format=webp,fit=pad",
+        "marca": "BASEMENT",
+        "vendedor": 1
+      }
+    },
+    {
+      "model": "mys.Product",
+      "pk": 15,
+      "fields": {
+        "descripcion": "Falda Mujer",
+        "precio_actual": 16990.0,
+        "precio_anterior": null,
+        "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883255636_01/width=240,height=240,quality=70,format=webp,fit=pad",
+        "marca": "BASEMENT",
+        "vendedor": 1
+      }
+    },
+    {
+      "model": "mys.Product",
+      "pk": 16,
+      "fields": {
+        "descripcion": "Top Tirantes Detalle Pliegues Mujer",
+        "precio_actual": 45990.0,
+        "precio_anterior": null,
+        "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17128630_01/width=240,height=240,quality=70,format=webp,fit=pad",
+        "marca": "MANGO",
+        "vendedor": 1
+      }
+    },
+    {
+      "model": "mys.Product",
+      "pk": 17,
+      "fields": {
+        "descripcion": "Blusa Cropped Sin Mangas Mujer",
+        "precio_actual": 24990.0,
+        "precio_anterior": null,
+        "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883254715_01/width=240,height=240,quality=70,format=webp,fit=pad",
+        "marca": "AMERICANINO",
+        "vendedor": 1
+      }
+    },
+    {
+      "model": "mys.Product",
+      "pk": 18,
+      "fields": {
+        "descripcion": "Pantalón Wide Leg Tiro Alto Mujer",
+        "precio_actual": 29990.0,
+        "precio_anterior": null,
+        "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883254686_01/width=240,height=240,quality=70,format=webp,fit=pad",
+        "marca": "AMERICANINO",
+        "vendedor": 1
+      }
+    },
+    {
+      "model": "mys.Product",
+      "pk": 19,
+      "fields": {
+        "descripcion": "Blusa Loose Fit Manga Larga Mujer",
+        "precio_actual": 16990.0,
+        "precio_anterior": null,
+        "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883249111_1/width=240,height=240,quality=70,format=webp,fit=pad",
+        "marca": "SYBILLA",
+        "vendedor": 1
+      }
+    },
+    {
+      "model": "mys.Product",
+      "pk": 20,
+      "fields": {
+        "descripcion": "Short Mujer",
+        "precio_actual": 12990.0,
+        "precio_anterior": null,
+        "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883249614_02/width=240,height=240,quality=70,format=webp,fit=pad",
+        "marca": "SYBILLA",
+        "vendedor": 1
+      }
+    },
+    {
+      "model": "mys.Product",
+      "pk": 21,
+      "fields": {
+        "descripcion": "Camisa Fluida Estampada Mujer",
+        "precio_actual": 39990.0,
+        "precio_anterior": null,
+        "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17128197_01/width=240,height=240,quality=70,format=webp,fit=pad",
+        "marca": "MANGO",
+        "vendedor": 1
+      }
+    },
+    {
+      "model": "mys.Product",
+      "pk": 22,
+      "fields": {
+        "descripcion": "Pantalón Fluido Estampado Mujer",
+        "precio_actual": 39990.0,
+        "precio_anterior": null,
+        "imagen_url": null,
+        "marca": "MANGO",
+        "vendedor": 1
+      }
+    },
+    {
+      "model": "mys.Product",
+      "pk": 23,
+      "fields": {
+        "descripcion": "Blusa Sin Mangas Algodón Mujer",
+        "precio_actual": 29990.0,
+        "precio_anterior": null,
+        "imagen_url": null,
+        "marca": "BASEMENT",
+        "vendedor": 1
+      }
+    },
+    {
+      "model": "mys.Product",
+      "pk": 24,
+      "fields": {
+        "descripcion": "Pantalón Palazzo Mujer",
+        "precio_actual": 24990.0,
+        "precio_anterior": null,
+        "imagen_url": null,
+        "marca": "BASEMENT",
+        "vendedor": 1
+      }
+    },
+    {
+      "model": "mys.Product",
+      "pk": 25,
+      "fields": {
+        "descripcion": "Pantalón Traje Lino Rayas Mujer",
+        "precio_actual": 59990.0,
+        "precio_anterior": null,
+        "imagen_url": null,
+        "marca": "MANGO",
+        "vendedor": 1
+      }
+    },
+    {
+      "model": "mys.Product",
+      "pk": 26,
+      "fields": {
+        "descripcion": "Pantalon Ancho, Tiro Alto, Crudo",
+        "precio_actual": 57990.0,
+        "precio_anterior": null,
+        "imagen_url": null,
+        "marca": "LIOLA",
+        "vendedor": 1
+      }
+    }
+  ]
