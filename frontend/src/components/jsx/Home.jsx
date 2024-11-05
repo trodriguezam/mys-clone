@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../css/Home.css'; 
+import '../css/Home.css';
 import axiosInstance from '../PageElements/axiosInstance';
 
 const ProductSwiper = () => {
@@ -12,8 +12,8 @@ const ProductSwiper = () => {
   useEffect(() => {
     fetchProducts();
   }, []);
-  
-  const fetchProducts = async () => {
+
+  /*const fetchProducts = async () => {
     try {
       const response = await fetch('http://localhost:8000/api/products');
       let data = await response.json();
@@ -22,14 +22,26 @@ const ProductSwiper = () => {
     } catch (error) {
       console.error("Error fetching products:", error);
     }
+  }; */
+
+  const fetchProducts = async () => {
+    try {
+      const response = await axiosInstance.get('/recommend-products/');
+      let data = response.data;
+      setProducts(data.sort(() => Math.random() - 0.5));
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
   };
+
   const currentUserId = localStorage.getItem('user');
 
   const handleMatch = async (productId) => {
-    axiosInstance.post('/match-user-products/', { user: currentUserId, product: productId})
-      .catch((error) => {
-      console.error(error);
-      });
+    try {
+      await axiosInstance.post('/match-user-products/', { user: currentUserId, product: productId });
+    } catch (error) {
+      console.error("Error matching product:", error);
+    }
   };
 
   const handleDragStart = (e) => {
@@ -54,26 +66,25 @@ const ProductSwiper = () => {
 
   const handleSwipe = (direction) => {
     setAnimation(direction);
-    
+
     if (direction === 'left') {
       handleMatch(products[currentIndex].id);
     }
-    
+
     setTimeout(() => {
       setAnimation(null);
       setCurrentIndex((prev) => (prev + 1) % products.length);
     }, 300);
   };
 
-  if (products.length === 0) {
-    return <div>Loading...</div>;
-  }
+  if (products.length === 0) return <div>Loading...</div>;
+  if (currentIndex >= products.length) return <div>No more products available</div>;
 
   const currentProduct = products[currentIndex];
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '40vh', marginTop: "75px" }}>
-      <div 
+      <div
         className="info-wrapper"
         onMouseDown={handleDragStart}
         onMouseMove={handleDragMove}

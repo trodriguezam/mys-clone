@@ -41,7 +41,7 @@ class Migration(migrations.Migration):
             name='user_permissions',
             field=models.ManyToManyField(related_name='custom_user_set', to='auth.permission'),
         ),
-        migrations.AlterField(
+        migrations.AddField(
             model_name='user',
             name='address',
             field=models.CharField(blank=True, max_length=50, null=True),

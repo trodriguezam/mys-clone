@@ -2,11 +2,13 @@ from django.shortcuts import render
 from .models import User, Shop, Product, MatchUserProduct
 from .serializers import UserSerializer, ShopSerializer, ProductSerializer, MatchUserProductSerializer, UserSignupSerializer, UserLoginSerializer
 from rest_framework import generics, status
+from rest_framework.views import APIView
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from django.contrib.auth import authenticate
+from django.db.models import Q
 
 
 class UserLogin(generics.GenericAPIView):
@@ -91,20 +93,41 @@ class MatchUser(generics.ListCreateAPIView):
         return MatchUserProduct.objects.filter(user=self.request.user)
 
 class RecommendProducts(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]
 
     def get(self, request):
-        # Get products liked by the current user
-        liked_products = MatchUserProduct.objects.filter(user=request.user, liked=True)
+        user = request.user
+
+        # Retrieve user preferences
+        preferred_colores = user.get_preferred_colores()
+        preferred_colores = ["azul", "verde"]
+        preferred_tipos = user.get_preferred_tipos()
+        preferred_tipos = ["blusa"]
+        preferred_marcas = user.get_preferred_marcas()
+        preferred_marcas = ["MANGO"]
+
+        # Set up filters for recommendations based on user preferences
+        recommendation_filters = Q()
         
-        # Extract brands of liked products
-        liked_brands = liked_products.values_list('product__brand', flat=True).distinct()
+        if preferred_colores:
+            recommendation_filters |= Q(color__in=preferred_colores)
         
-        # Recommend other products by the same brands
-        recommended_products = Product.objects.filter(brand__in=liked_brands).exclude(
-            id__in=liked_products.values_list('product_id', flat=True)
-        )[:10]  # Limit to 10 recommendations
+        if preferred_tipos:
+            recommendation_filters |= Q(tipo__in=preferred_tipos)
         
-        # Serialize the recommended products
-        serializer = ProductSerializer(recommended_products, many=True)
+        if preferred_marcas:
+            recommendation_filters |= Q(marca__in=preferred_marcas)
+
+        # Exclude products the user has already liked
+        exclude_ids = MatchUserProduct.objects.filter(user=user).values_list('product_id', flat=True)
+        recommendations = Product.objects.filter(
+            recommendation_filters
+        ).exclude(id__in=exclude_ids)[:10]  # Limit recommendations to 10 products
+
+        # If no recommendations match preferences, show random products
+        if not recommendations.exists():
+            recommendations = Product.objects.exclude(id__in=exclude_ids)[:10]
+
+        # Serialize and return the recommended products
+        serializer = ProductSerializer(recommendations, many=True)
         return Response(serializer.data)

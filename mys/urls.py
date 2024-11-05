@@ -14,4 +14,5 @@ urlpatterns = [
     path('products/<int:pk>/', views.ProductRetrieveUpdateDestroy.as_view(), name='product-retrieve-update-destroy'),
     path('match-user-products/', views.MatchUserProductListCreate.as_view(), name='match-user-product-list-create'),
     path('match-user-products/<int:pk>/', views.MatchUserProductRetrieveUpdateDestroy.as_view(), name='match-user-product-retrieve-update-destroy'),
+    path('recommend-products/', views.RecommendProducts.as_view(), name='recommend-products'),
 ]
