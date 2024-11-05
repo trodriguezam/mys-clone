@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin, Group, Permission
-
+import json
 
 class UserManager(BaseUserManager):
     def create_user(self, email, username, password=None, **extra_fields):
@@ -22,14 +22,15 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(max_length=254, unique=True)
     username = models.CharField(max_length=50, unique=True)
     phone = models.CharField(max_length=50, null=True, blank=True)
-    address = models.CharField(max_length=50, null=True, blank=True)
+    
+    preferred_colores = models.TextField(null=True, blank=True)  # Campo para almacenar colores preferidos
+    preferred_tipos = models.TextField(null=True, blank=True)  # Campo para almacenar tipos de ropa preferidos
+    preferred_marcas = models.TextField(null=True, blank=True)  # Campo para almacenar marcas preferidas
+    
     groups = models.ManyToManyField(Group, related_name='custom_user_set')
     user_permissions = models.ManyToManyField(Permission, related_name='custom_user_set')
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
-
-    groups = models.ManyToManyField(Group, related_name='custom_user_set')
-    user_permissions = models.ManyToManyField(Permission, related_name='custom_user_set')
 
     objects = UserManager()
 
@@ -38,7 +39,33 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.username
+    
+    def set_preferred_colores(self, colores):
+        self.preferred_colores = json.dumps(colores)
+        self.save()
+    
+    def set_preferred_tipos(self, tipos):
+        self.preferred_tipos = json.dumps(tipos)
+        self.save()
+    
+    def set_preferred_marcas(self, marcas):
+        self.preferred_marcas = json.dumps(marcas)
+        self.save()
+    
+    def get_preferred_colores(self):
+        if self.preferred_colores:
+            return json.loads(self.preferred_colores)
+        return []
+    
+    def get_preferred_tipos(self):
+        if self.preferred_tipos:
+            return json.loads(self.preferred_tipos)
+        return []
 
+    def get_preferred_marcas(self):
+        if self.preferred_marcas:
+            return json.loads(self.preferred_marcas)
+        return []
 
 class Shop(models.Model):
     name = models.CharField(max_length=50)
@@ -54,7 +81,9 @@ class Product(models.Model):
     precio_actual = models.FloatField(verbose_name="Precio Actual", null=True, blank=True)
     precio_anterior = models.FloatField(verbose_name="Precio Anterior", null=True, blank=True)
     imagen_url = models.URLField(verbose_name="Imagen URL", null=True, blank=True)
+    color = models.CharField(max_length=50, verbose_name="Color", null=True, blank=True)
     marca = models.CharField(max_length=100, verbose_name="Marca", null=True, blank=True)
+    tipo = models.CharField(max_length=50, verbose_name="Tipo", null=True, blank=True)
     vendedor = models.ForeignKey(Shop, on_delete=models.CASCADE, verbose_name="Vendedor", null=True, blank=True)
     SIZES = ['XS', 'S', 'M', 'L', 'XL']
     size = models.CharField(
@@ -79,5 +108,4 @@ class MatchUserProduct(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.user.username} - {self.product.name}"
-
+        return f"{self.user.username} - {self.product.descripcion}"

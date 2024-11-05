@@ -47,19 +47,13 @@ const UserConfig = () => {
     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh', padding: '20px' }}>
       <Paper elevation={3} sx={{ padding: '20px', maxWidth: '400px', width: '100%' }}>
         <Typography variant="h4" gutterBottom>
-          User Profile
-        </Typography>
-        <Typography variant="body1" gutterBottom>
-          <strong>Username:</strong> {user.username}
+          {user.username}
         </Typography>
         <Typography variant="body1" gutterBottom>
           <strong>Email:</strong> {user.email}
         </Typography>
         <Typography variant="body1" gutterBottom>
           <strong>Phone:</strong> {user.phone}
-        </Typography>
-        <Typography variant="body1" gutterBottom>
-          <strong>Address:</strong> {user.address}
         </Typography>
       </Paper>
     </Box>
