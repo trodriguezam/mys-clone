@@ -90,3 +90,21 @@ class MatchUser(generics.ListCreateAPIView):
     def get_queryset(self):
         return MatchUserProduct.objects.filter(user=self.request.user)
 
+class RecommendProducts(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        # Get products liked by the current user
+        liked_products = MatchUserProduct.objects.filter(user=request.user, liked=True)
+        
+        # Extract brands of liked products
+        liked_brands = liked_products.values_list('product__brand', flat=True).distinct()
+        
+        # Recommend other products by the same brands
+        recommended_products = Product.objects.filter(brand__in=liked_brands).exclude(
+            id__in=liked_products.values_list('product_id', flat=True)
+        )[:10]  # Limit to 10 recommendations
+        
+        # Serialize the recommended products
+        serializer = ProductSerializer(recommended_products, many=True)
+        return Response(serializer.data)
