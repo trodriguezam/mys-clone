@@ -7,7 +7,7 @@
             "email": "manu@123.cl",
             "password": "123",
             "phone": "123456789",
-            "address": "Calle 123"
+            "preferred_colores": ["Rojo", "Azul"]
     }
     },
     {

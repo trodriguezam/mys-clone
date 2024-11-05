@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axiosInstance from '../PageElements/axiosInstance.jsx';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { TextField, Button, CssBaseline, ThemeProvider, createTheme, Typography } from '@mui/material';
+import { TextField, Button, CssBaseline, ThemeProvider, createTheme, Typography, FormControlLabel, Checkbox, Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import * as yup from 'yup';
 import { useNavigate } from 'react-router-dom';
-import { Box, color } from '@mui/system';
+import { Box } from '@mui/system';
 
 const theme = createTheme({
   palette: {
@@ -32,6 +33,9 @@ const validationSchema = yup.object({
   confirmPassword: yup.string()
     .oneOf([yup.ref('password'), null], 'Passwords must match')
     .required('Confirm Password is required'),
+  preferred_colores: yup.array().of(yup.string()),
+  preferred_tipos: yup.array().of(yup.string()),
+  preferred_marcas: yup.array().of(yup.string()),
 });
 
 function SignupForm({ setCurrentUser }) {
@@ -40,6 +44,37 @@ function SignupForm({ setCurrentUser }) {
   const [tipos, setTipos] = useState([]);
   const [marcas, setMarcas] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('http://localhost:8000/api/products');
+        let data = await response.json();
+        console.log('Products:', data);  // Debug
+
+        // Filtrar colores, tipos y marcas únicos
+        const uniqueColors = new Set();
+        const uniqueTypes = new Set();
+        const uniqueBrands = new Set();
+
+        data.forEach(product => {
+          if (product.color) uniqueColors.add(product.color);
+          if (product.tipo) uniqueTypes.add(product.tipo);
+          if (product.marca) uniqueBrands.add(product.marca);
+        });
+
+        setColores(Array.from(uniqueColors));
+        setTipos(Array.from(uniqueTypes));
+        setMarcas(Array.from(uniqueBrands));
+        setLoading(false);
+      } catch (error) {
+        console.error("Error fetching products:", error);
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []); // Ensure the effect runs only once
 
   return (
     <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh', padding: '70px 0' }}>
@@ -50,9 +85,10 @@ function SignupForm({ setCurrentUser }) {
             Sign Up
           </Typography>
           <Formik
-            initialValues={{ username: '', email: '', phone: '', password: '', confirmPassword: '' }}
+            initialValues={{ username: '', email: '', phone: '', password: '', confirmPassword: '', preferred_colores: [], preferred_tipos: [], preferred_marcas: [] }}
             validationSchema={validationSchema}
             onSubmit={(values, { setSubmitting, isValid, validateForm }) => {
+              console.log("values", values);
               validateForm().then(errors => {
                 if (Object.keys(errors).length) {
                   alert('Please correct the errors before submitting.');
@@ -70,206 +106,292 @@ function SignupForm({ setCurrentUser }) {
               });
             }}
           >
-            <Form>
-              <Field
-                as={TextField}
-                name="username"
-                type="text"
-                label="Username"
-                fullWidth
-                margin="normal"
-                sx={{
-                  '& .MuiOutlinedInput-root': {
-                    '& fieldset': {
-                      borderColor: 'black', // Border color
+            {({ values, setFieldValue }) => (
+              <Form>
+                <Field
+                  as={TextField}
+                  name="username"
+                  type="text"
+                  label="Username"
+                  fullWidth
+                  margin="normal"
+                  sx={{
+                    '& .MuiOutlinedInput-root': {
+                      '& fieldset': {
+                        borderColor: 'black', // Border color
+                      },
+                      '&:hover fieldset': {
+                        borderColor: '#51bdb6', // Border color on hover
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: '#51bdb6', // Border color when focused
+                      },
                     },
-                    '&:hover fieldset': {
-                      borderColor: '#51bdb6', // Border color on hover
+                    '& .MuiInputLabel-root': {
+                      color: 'black', // Label color
                     },
-                    '&.Mui-focused fieldset': {
-                      borderColor: '#51bdb6', // Border color when focused
+                    '& .MuiInputLabel-root.Mui-focused': {
+                      color: '#51bdb6', // Label color when focused
                     },
-                  },
-                  '& .MuiInputLabel-root': {
-                    color: 'black', // Label color
-                  },
-                  '& .MuiInputLabel-root.Mui-focused': {
-                    color: '#51bdb6', // Label color when focused
-                  },
-                  '& .MuiOutlinedInput-input': {
-                    color: 'black', // Text color
-                  },
-                }}
-                InputLabelProps={{
-                  style: { color: 'black' }, // Initial label color
-                }}
-                InputProps={{
-                  style: { color: 'black' }, // Initial text color
-                }}
-              />
-              <Typography color='black'>
-                <ErrorMessage name="username" component="div" />
-              </Typography>
-              <Field
-                as={TextField}
-                name="email"
-                type="email"
-                label="Email"
-                fullWidth
-                margin="normal"
-                sx={{
-                  '& .MuiOutlinedInput-root': {
-                    '& fieldset': {
-                      borderColor: 'black', // Border color
+                    '& .MuiOutlinedInput-input': {
+                      color: 'black', // Text color
                     },
-                    '&:hover fieldset': {
-                      borderColor: '#51bdb6', // Border color on hover
+                  }}
+                  InputLabelProps={{
+                    style: { color: 'black' }, // Initial label color
+                  }}
+                  InputProps={{
+                    style: { color: 'black' }, // Initial text color
+                  }}
+                />
+                <Typography color='black'>
+                  <ErrorMessage name="username" component="div" />
+                </Typography>
+                <Field
+                  as={TextField}
+                  name="email"
+                  type="email"
+                  label="Email"
+                  fullWidth
+                  margin="normal"
+                  sx={{
+                    '& .MuiOutlinedInput-root': {
+                      '& fieldset': {
+                        borderColor: 'black', // Border color
+                      },
+                      '&:hover fieldset': {
+                        borderColor: '#51bdb6', // Border color on hover
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: '#51bdb6', // Border color when focused
+                      },
                     },
-                    '&.Mui-focused fieldset': {
-                      borderColor: '#51bdb6', // Border color when focused
+                    '& .MuiInputLabel-root': {
+                      color: 'black', // Label color
                     },
-                  },
-                  '& .MuiInputLabel-root': {
-                    color: 'black', // Label color
-                  },
-                  '& .MuiInputLabel-root.Mui-focused': {
-                    color: '#51bdb6', // Label color when focused
-                  },
-                  '& .MuiOutlinedInput-input': {
-                    color: 'black', // Text color
-                  },
-                }}
-                InputLabelProps={{
-                  style: { color: 'black' }, // Initial label color
-                }}
-                InputProps={{
-                  style: { color: 'black' }, // Initial text color
-                }}
-              />
-              <Typography color='black'>
-                <ErrorMessage name="email" component="div" />
-              </Typography>
-              <Field
-                as={TextField}
-                name="phone"
-                type="text"
-                label="Phone"
-                fullWidth
-                margin="normal"
-                sx={{
-                  '& .MuiOutlinedInput-root': {
-                    '& fieldset': {
-                      borderColor: 'black', // Border color
+                    '& .MuiInputLabel-root.Mui-focused': {
+                      color: '#51bdb6', // Label color when focused
                     },
-                    '&:hover fieldset': {
-                      borderColor: '#51bdb6', // Border color on hover
+                    '& .MuiOutlinedInput-input': {
+                      color: 'black', // Text color
                     },
-                    '&.Mui-focused fieldset': {
-                      borderColor: '#51bdb6', // Border color when focused
+                  }}
+                  InputLabelProps={{
+                    style: { color: 'black' }, // Initial label color
+                  }}
+                  InputProps={{
+                    style: { color: 'black' }, // Initial text color
+                  }}
+                />
+                <Typography color='black'>
+                  <ErrorMessage name="email" component="div" />
+                </Typography>
+                <Field
+                  as={TextField}
+                  name="phone"
+                  type="text"
+                  label="Phone"
+                  fullWidth
+                  margin="normal"
+                  sx={{
+                    '& .MuiOutlinedInput-root': {
+                      '& fieldset': {
+                        borderColor: 'black', // Border color
+                      },
+                      '&:hover fieldset': {
+                        borderColor: '#51bdb6', // Border color on hover
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: '#51bdb6', // Border color when focused
+                      },
                     },
-                  },
-                  '& .MuiInputLabel-root': {
-                    color: 'black', // Label color
-                  },
-                  '& .MuiInputLabel-root.Mui-focused': {
-                    color: '#51bdb6', // Label color when focused
-                  },
-                  '& .MuiOutlinedInput-input': {
-                    color: 'black', // Text color
-                  },
-                }}
-                InputLabelProps={{
-                  style: { color: 'black' }, // Initial label color
-                }}
-                InputProps={{
-                  style: { color: 'black' }, // Initial text color
-                }}
-              />
-              <Typography color='black'>
-                <ErrorMessage name="phone" component="div" />
-              </Typography>
-              <Field
-                as={TextField}
-                name="password"
-                type="password"
-                label="Password"
-                fullWidth
-                margin="normal"
-                sx={{
-                  '& .MuiOutlinedInput-root': {
-                    '& fieldset': {
-                      borderColor: 'black', // Border color
+                    '& .MuiInputLabel-root': {
+                      color: 'black', // Label color
                     },
-                    '&:hover fieldset': {
-                      borderColor: '#51bdb6', // Border color on hover
+                    '& .MuiInputLabel-root.Mui-focused': {
+                      color: '#51bdb6', // Label color when focused
                     },
-                    '&.Mui-focused fieldset': {
-                      borderColor: '#51bdb6', // Border color when focused
+                    '& .MuiOutlinedInput-input': {
+                      color: 'black', // Text color
                     },
-                  },
-                  '& .MuiInputLabel-root': {
-                    color: 'black', // Label color
-                  },
-                  '& .MuiInputLabel-root.Mui-focused': {
-                    color: '#51bdb6', // Label color when focused
-                  },
-                  '& .MuiOutlinedInput-input': {
-                    color: 'black', // Text color
-                  },
-                }}
-                InputLabelProps={{
-                  style: { color: 'black' }, // Initial label color
-                }}
-                InputProps={{
-                  style: { color: 'black' }, // Initial text color
-                }}
-              />
-              <Typography color='black'>
-                <ErrorMessage name="password" component="div" />
-              </Typography>
-              <Field
-                as={TextField}
-                name="confirmPassword"
-                type="password"
-                label="Confirm Password"
-                fullWidth
-                margin="normal"
-                sx={{
-                  '& .MuiOutlinedInput-root': {
-                    '& fieldset': {
-                      borderColor: 'black', // Border color
+                  }}
+                  InputLabelProps={{
+                    style: { color: 'black' }, // Initial label color
+                  }}
+                  InputProps={{
+                    style: { color: 'black' }, // Initial text color
+                  }}
+                />
+                <Typography color='black'>
+                  <ErrorMessage name="phone" component="div" />
+                </Typography>
+                <Field
+                  as={TextField}
+                  name="password"
+                  type="password"
+                  label="Password"
+                  fullWidth
+                  margin="normal"
+                  sx={{
+                    '& .MuiOutlinedInput-root': {
+                      '& fieldset': {
+                        borderColor: 'black', // Border color
+                      },
+                      '&:hover fieldset': {
+                        borderColor: '#51bdb6', // Border color on hover
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: '#51bdb6', // Border color when focused
+                      },
                     },
-                    '&:hover fieldset': {
-                      borderColor: '#51bdb6', // Border color on hover
+                    '& .MuiInputLabel-root': {
+                      color: 'black', // Label color
                     },
-                    '&.Mui-focused fieldset': {
-                      borderColor: '#51bdb6', // Border color when focused
+                    '& .MuiInputLabel-root.Mui-focused': {
+                      color: '#51bdb6', // Label color when focused
                     },
-                  },
-                  '& .MuiInputLabel-root': {
-                    color: 'black', // Label color
-                  },
-                  '& .MuiInputLabel-root.Mui-focused': {
-                    color: '#51bdb6', // Label color when focused
-                  },
-                  '& .MuiOutlinedInput-input': {
-                    color: 'black', // Text color
-                  },
-                }}
-                InputLabelProps={{
-                  style: { color: 'black' }, // Initial label color
-                }}
-                InputProps={{
-                  style: { color: 'black' }, // Initial text color
-                }}
-              />
-              <Typography color='black'>
-                <ErrorMessage name="confirmPassword" component="div" />
-              </Typography>
-              <Button type="submit" sx={{ backgroundColor: '#fd7b7b', '&:hover': { backgroundColor: '#fd7b7b' }, mt: 2 }} variant="contained" fullWidth>
-                Sign Up
-              </Button>
-            </Form>
+                    '& .MuiOutlinedInput-input': {
+                      color: 'black', // Text color
+                    },
+                  }}
+                  InputLabelProps={{
+                    style: { color: 'black' }, // Initial label color
+                  }}
+                  InputProps={{
+                    style: { color: 'black' }, // Initial text color
+                  }}
+                />
+                <Typography color='black'>
+                  <ErrorMessage name="password" component="div" />
+                </Typography>
+                <Field
+                  as={TextField}
+                  name="confirmPassword"
+                  type="password"
+                  label="Confirm Password"
+                  fullWidth
+                  margin="normal"
+                  sx={{
+                    '& .MuiOutlinedInput-root': {
+                      '& fieldset': {
+                        borderColor: 'black', // Border color
+                      },
+                      '&:hover fieldset': {
+                        borderColor: '#51bdb6', // Border color on hover
+                      },
+                      '&.Mui-focused fieldset': {
+                        borderColor: '#51bdb6', // Border color when focused
+                      },
+                    },
+                    '& .MuiInputLabel-root': {
+                      color: 'black', // Label color
+                    },
+                    '& .MuiInputLabel-root.Mui-focused': {
+                      color: '#51bdb6', // Label color when focused
+                    },
+                    '& .MuiOutlinedInput-input': {
+                      color: 'black', // Text color
+                    },
+                  }}
+                  InputLabelProps={{
+                    style: { color: 'black' }, // Initial label color
+                  }}
+                  InputProps={{
+                    style: { color: 'black' }, // Initial text color
+                  }}
+                />
+                <Typography color='black'>
+                  <ErrorMessage name="confirmPassword" component="div" />
+                </Typography>
+                <Accordion>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography variant="p" sx={{ color: 'black' }}>
+                      Preferred Colors
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    {colores.map((color) => (
+                      <FormControlLabel
+                        key={color}
+                        control={
+                          <Checkbox
+                            checked={values.preferred_colores.includes(color)}
+                            onChange={(e) => {
+                              if (e.target.checked) {
+                                setFieldValue('preferred_colores', [...values.preferred_colores, color]);
+                              } else {
+                                setFieldValue('preferred_colores', values.preferred_colores.filter((c) => c !== color));
+                              }
+                            }}
+                            name="preferred_colores"
+                          />
+                        }
+                        label={color}
+                      />
+                    ))}
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography variant="p" sx={{ color: 'black' }}>
+                      Preferred Types
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    {tipos.map((tipo) => (
+                      <FormControlLabel
+                        key={tipo}
+                        control={
+                          <Checkbox
+                            checked={values.preferred_tipos.includes(tipo)}
+                            onChange={(e) => {
+                              if (e.target.checked) {
+                                setFieldValue('preferred_tipos', [...values.preferred_tipos, tipo]);
+                              } else {
+                                setFieldValue('preferred_tipos', values.preferred_tipos.filter((t) => t !== tipo));
+                              }
+                            }}
+                            name="preferred_tipos"
+                          />
+                        }
+                        label={tipo}
+                      />
+                    ))}
+                  </AccordionDetails>
+                </Accordion>
+                <Accordion>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography variant="p" sx={{ color: 'black' }}>
+                      Preferred Brands
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    {marcas.map((marca) => (
+                      <FormControlLabel
+                        key={marca}
+                        control={
+                          <Checkbox
+                            checked={values.preferred_marcas.includes(marca)}
+                            onChange={(e) => {
+                              if (e.target.checked) {
+                                setFieldValue('preferred_marcas', [...values.preferred_marcas, marca]);
+                              } else {
+                                setFieldValue('preferred_marcas', values.preferred_marcas.filter((m) => m !== marca));
+                              }
+                            }}
+                            name="preferred_marcas"
+                          />
+                        }
+                        label={marca}
+                      />
+                    ))}
+                  </AccordionDetails>
+                </Accordion>
+                <Button type="submit" sx={{ backgroundColor: '#fd7b7b', '&:hover': { backgroundColor: '#fd7b7b' }, mt: 2 }} variant="contained" fullWidth>
+                  Sign Up
+                </Button>
+              </Form>
+            )}
           </Formik>
         </Box>
       </ThemeProvider>
