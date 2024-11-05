@@ -81,6 +81,7 @@ class Product(models.Model):
     precio_actual = models.FloatField(verbose_name="Precio Actual", null=True, blank=True)
     precio_anterior = models.FloatField(verbose_name="Precio Anterior", null=True, blank=True)
     imagen_url = models.URLField(verbose_name="Imagen URL", null=True, blank=True)
+    product_url = models.URLField(verbose_name="Producto URL", null=True, blank=True)
     color = models.CharField(max_length=50, verbose_name="Color", null=True, blank=True)
     marca = models.CharField(max_length=100, verbose_name="Marca", null=True, blank=True)
     tipo = models.CharField(max_length=50, verbose_name="Tipo", null=True, blank=True)
