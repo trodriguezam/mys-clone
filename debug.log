@@ -1,0 +1,775 @@
+Watching for file changes with StatReloader
+/home/topo/ISS/backend/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+Retrieved 6 users
+"GET /api/users/ HTTP/1.1" 200 551
+Retrieved 6 users
+"GET /api/users/ HTTP/1.1" 200 551
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+Users in queryset: <QuerySet [<User: Manu>, <User: fjdksgndflgjn>, <User: fjdfdg>, <User: TopoTemible2002>, <User: hola>, <User: toop>]>
+"GET /api/users/ HTTP/1.1" 200 551
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Traceback (most recent call last):
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/utils/deprecation.py", line 128, in __call__
+    response = self.process_request(request)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/middleware/common.py", line 48, in process_request
+    host = request.get_host()
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/http/request.py", line 151, in get_host
+    raise DisallowedHost(msg)
+django.core.exceptions.DisallowedHost: Invalid HTTP_HOST header: 'testserver'. You may need to add 'testserver' to ALLOWED_HOSTS.
+Bad Request: /api/users/
+/home/topo/ISS/backend/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/products/ HTTP/1.1" 200 4034
+"POST /api/signup/ HTTP/1.1" 200 34
+"GET /api/users/ HTTP/1.1" 200 551
+Watching for file changes with StatReloader
+"GET /api/users/ HTTP/1.1" 200 551
+Watching for file changes with StatReloader
+"GET /api/users/ HTTP/1.1" 200 551
+"GET /api/users/ HTTP/1.1" 200 551
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/users/ HTTP/1.1" 200 551
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4160
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2804
+"GET /static/admin/css/base.css HTTP/1.1" 200 22092
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+"GET /static/admin/css/login.css HTTP/1.1" 200 951
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+"GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 6727
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /admin/auth/user/ HTTP/1.1" 200 25454
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+"GET /static/admin/js/core.js HTTP/1.1" 200 6208
+"GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9097
+"GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+"GET /static/admin/img/search.svg HTTP/1.1" 200 458
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+"GET /static/admin/js/filters.js HTTP/1.1" 200 978
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+"GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+"GET /admin/auth/group/ HTTP/1.1" 200 8176
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/auth/user/ HTTP/1.1" 200 25454
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /api/users/ HTTP/1.1" 200 551
+Watching for file changes with StatReloader
+"GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 8248
+"GET /admin/authtoken/tokenproxy/ HTTP/1.1" 200 8248
+"GET /admin/auth/user/ HTTP/1.1" 200 25454
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/ HTTP/1.1" 200 6727
+Not Found: /
+"GET / HTTP/1.1" 404 2305
+Not Found: /home
+"GET /home HTTP/1.1" 404 2335
+"GET /admin/ HTTP/1.1" 200 6727
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/products/ HTTP/1.1" 200 4034
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+"GET /api/match-user-products/ HTTP/1.1" 200 1372
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1372
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/products/ HTTP/1.1" 200 4034
+"POST /api/signup/ HTTP/1.1" 200 36
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/topo/ISS/mys/views.py", line 26, in post
+    user = User.objects.get(email=serializer.validated_data['email'])
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+mys.models.User.DoesNotExist: User matching query does not exist.
+"POST /api/login/ HTTP/1.1" 500 103049
+"GET /admin/auth/user/ HTTP/1.1" 200 25922
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/auth/user/?is_active__exact=1 HTTP/1.1" 200 27690
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /admin/auth/user/? HTTP/1.1" 200 25922
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/products/ HTTP/1.1" 200 4034
+"POST /api/signup/ HTTP/1.1" 200 35
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/topo/ISS/mys/views.py", line 23, in post
+    user = User.objects.get(email=serializer.validated_data['email'])
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+mys.models.User.DoesNotExist: User matching query does not exist.
+"POST /api/login/ HTTP/1.1" 500 103046
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/topo/ISS/mys/views.py", line 23, in post
+    user = User.objects.get(email=serializer.validated_data['email'])
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+mys.models.User.DoesNotExist: User matching query does not exist.
+"POST /api/login/ HTTP/1.1" 500 103046
+Watching for file changes with StatReloader
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/topo/ISS/mys/views.py", line 23, in post
+    user = User.objects.get(email=serializer.validated_data['email'])
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+mys.models.User.DoesNotExist: User matching query does not exist.
+"POST /api/login/ HTTP/1.1" 500 103046
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/products/ HTTP/1.1" 200 4034
+"POST /api/signup/ HTTP/1.1" 200 36
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/topo/ISS/mys/views.py", line 23, in post
+    user = User.objects.get(email=serializer.validated_data['email'])
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+mys.models.User.DoesNotExist: User matching query does not exist.
+"POST /api/login/ HTTP/1.1" 500 103049
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/urls.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/signup/ HTTP/1.1" 200 33
+"GET /api/users/ HTTP/1.1" 200 2496
+"POST /api/login/ HTTP/1.1" 200 58
+Not Found: /api/recommend-products
+"GET /api/recommend-products?user[user_id]=7&user[email]=bz%40bz.com&user[username]=dfjksdsfhjb HTTP/1.1" 404 5424
+Not Found: /api/recommend-products
+"GET /api/recommend-products?user[user_id]=7&user[email]=bz%40bz.com&user[username]=dfjksdsfhjb HTTP/1.1" 404 5424
+Not Found: /api/recommend-products
+"GET /api/recommend-products?user[user_id]=7&user[email]=bz%40bz.com&user[username]=dfjksdsfhjb HTTP/1.1" 404 5424
+Not Found: /api/recommend-products
+"GET /api/recommend-products?user[user_id]=7&user[email]=bz%40bz.com&user[username]=dfjksdsfhjb HTTP/1.1" 404 5424
+Not Found: /api/recommend-products
+"GET /api/recommend-products?user[user_id]=7&user[email]=bz%40bz.com&user[username]=dfjksdsfhjb HTTP/1.1" 404 5424
+Not Found: /api/recommend-products
+"GET /api/recommend-products?user[user_id]=7&user[email]=bz%40bz.com&user[username]=dfjksdsfhjb HTTP/1.1" 404 5424
+/home/topo/ISS/mys/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/products/ HTTP/1.1" 200 3787
+"GET /api/products/ HTTP/1.1" 200 3787
+"POST /api/signup/ HTTP/1.1" 200 33
+"POST /api/login/ HTTP/1.1" 200 55
+"GET /api/recommend-products?user[user_id]=8&user[email]=vz%40vz.com&user[username]=sdkjsdkl HTTP/1.1" 301 0
+"GET /api/recommend-products/?user[user_id]=8&user[email]=vz%40vz.com&user[username]=sdkjsdkl HTTP/1.1" 200 3178
+"GET /api/recommend-products/?user[user_id]=8&user[email]=vz%40vz.com&user[username]=sdkjsdkl HTTP/1.1" 200 3178
+"GET /api/recommend-products/?user[user_id]=8&user[email]=vz%40vz.com&user[username]=sdkjsdkl HTTP/1.1" 200 3178
+"GET /api/recommend-products/?user[user_id]=8&user[email]=vz%40vz.com&user[username]=sdkjsdkl HTTP/1.1" 200 3178
+"GET /api/recommend-products/?user[user_id]=8&user[email]=vz%40vz.com&user[username]=sdkjsdkl HTTP/1.1" 200 3178
+"GET /api/recommend-products/?user[user_id]=8&user[email]=vz%40vz.com&user[username]=sdkjsdkl HTTP/1.1" 200 3178
+"OPTIONS /api/match-user-products/ HTTP/1.1" 200 0
+"POST /api/match-user-products/ HTTP/1.1" 201 30
+"GET /api/match-user-products/ HTTP/1.1" 200 1403
+"GET /api/products/ HTTP/1.1" 200 3787
+"GET /api/match-user-products/ HTTP/1.1" 200 1403
+"GET /api/products/ HTTP/1.1" 200 3787
+"GET /api/recommend-products/?user[user_id]=8&user[email]=vz%40vz.com&user[username]=sdkjsdkl HTTP/1.1" 200 3042
+"GET /api/recommend-products/?user[user_id]=8&user[email]=vz%40vz.com&user[username]=sdkjsdkl HTTP/1.1" 200 3042
+"GET /api/recommend-products/?user[user_id]=8&user[email]=vz%40vz.com&user[username]=sdkjsdkl HTTP/1.1" 200 3042
+"GET /api/recommend-products/?user[user_id]=8&user[email]=vz%40vz.com&user[username]=sdkjsdkl HTTP/1.1" 200 3042
+"GET /api/recommend-products/?user[user_id]=8&user[email]=vz%40vz.com&user[username]=sdkjsdkl HTTP/1.1" 200 3042
+"GET /api/recommend-products/?user[user_id]=8&user[email]=vz%40vz.com&user[username]=sdkjsdkl HTTP/1.1" 200 3042
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+"GET /api/products/ HTTP/1.1" 200 3787
+"GET /api/products/ HTTP/1.1" 200 3787
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/signup/ HTTP/1.1" 200 33
+"POST /api/login/ HTTP/1.1" 200 64
+"GET /api/recommend-products?user[user_id]=9&user[email]=tr%40tr.com&user[username]=sdkljsdafklnjfmnb HTTP/1.1" 301 0
+"GET /api/recommend-products/?user[user_id]=9&user[email]=tr%40tr.com&user[username]=sdkljsdafklnjfmnb HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=tr%40tr.com&user[username]=sdkljsdafklnjfmnb HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=tr%40tr.com&user[username]=sdkljsdafklnjfmnb HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=tr%40tr.com&user[username]=sdkljsdafklnjfmnb HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=tr%40tr.com&user[username]=sdkljsdafklnjfmnb HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=tr%40tr.com&user[username]=sdkljsdafklnjfmnb HTTP/1.1" 200 3368
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/products/ HTTP/1.1" 200 4034
+/home/topo/ISS/mys/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/users/ HTTP/1.1" 200 1571
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/signup/ HTTP/1.1" 200 34
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/topo/ISS/mys/views.py", line 23, in post
+    user = User.objects.get(email=serializer.validated_data['email'])
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+mys.models.User.DoesNotExist: User matching query does not exist.
+"POST /api/login/ HTTP/1.1" 500 103127
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/topo/ISS/mys/views.py", line 23, in post
+    user = User.objects.get(email=serializer.validated_data['email'])
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+mys.models.User.DoesNotExist: User matching query does not exist.
+"POST /api/login/ HTTP/1.1" 500 103127
+"GET /api/products/ HTTP/1.1" 200 3787
+"GET /api/products/ HTTP/1.1" 200 3787
+Bad Request: /api/signup/
+"POST /api/signup/ HTTP/1.1" 400 42
+"POST /api/signup/ HTTP/1.1" 200 34
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/topo/ISS/mys/views.py", line 23, in post
+    user = User.objects.get(email=serializer.validated_data['email'])
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+mys.models.User.DoesNotExist: User matching query does not exist.
+"POST /api/login/ HTTP/1.1" 500 103127
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/products/ HTTP/1.1" 200 3787
+"GET /api/products/ HTTP/1.1" 200 3787
+"POST /api/signup/ HTTP/1.1" 200 36
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/topo/ISS/mys/views.py", line 23, in post
+    user = User.objects.get(email=serializer.validated_data['email'])
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/topo/ISS/env/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+mys.models.User.DoesNotExist: User matching query does not exist.
+"POST /api/login/ HTTP/1.1" 500 103133
+/home/topo/ISS/mys/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/products/ HTTP/1.1" 200 3787
+"GET /api/products/ HTTP/1.1" 200 3787
+"POST /api/signup/ HTTP/1.1" 200 33
+"POST /api/login/ HTTP/1.1" 200 52
+"GET /api/recommend-products?user[user_id]=10&user[email]=xx%40x.com&user[username]=jdjhd HTTP/1.1" 301 0
+"GET /api/recommend-products/?user[user_id]=10&user[email]=xx%40x.com&user[username]=jdjhd HTTP/1.1" 200 3178
+"GET /api/recommend-products/?user[user_id]=10&user[email]=xx%40x.com&user[username]=jdjhd HTTP/1.1" 200 3178
+"GET /api/recommend-products/?user[user_id]=10&user[email]=xx%40x.com&user[username]=jdjhd HTTP/1.1" 200 3178
+"GET /api/recommend-products/?user[user_id]=10&user[email]=xx%40x.com&user[username]=jdjhd HTTP/1.1" 200 3178
+"GET /api/recommend-products/?user[user_id]=10&user[email]=xx%40x.com&user[username]=jdjhd HTTP/1.1" 200 3178
+"GET /api/recommend-products/?user[user_id]=10&user[email]=xx%40x.com&user[username]=jdjhd HTTP/1.1" 200 3178
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+"GET /api/products/ HTTP/1.1" 200 3787
+"GET /api/products/ HTTP/1.1" 200 3787
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"POST /api/signup/ HTTP/1.1" 200 34
+"POST /api/login/ HTTP/1.1" 200 54
+"GET /api/recommend-products?user[user_id]=11&user[email]=fk%40fk.com&user[username]=fkfkfk HTTP/1.1" 301 0
+"GET /api/recommend-products/?user[user_id]=11&user[email]=fk%40fk.com&user[username]=fkfkfk HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=11&user[email]=fk%40fk.com&user[username]=fkfkfk HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=11&user[email]=fk%40fk.com&user[username]=fkfkfk HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=11&user[email]=fk%40fk.com&user[username]=fkfkfk HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=11&user[email]=fk%40fk.com&user[username]=fkfkfk HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=11&user[email]=fk%40fk.com&user[username]=fkfkfk HTTP/1.1" 200 3368
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/products/ HTTP/1.1" 200 4034
+/home/topo/ISS/mys/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/signup/ HTTP/1.1" 200 35
+"POST /api/login/ HTTP/1.1" 200 55
+"GET /api/recommend-products?user[user_id]=12&user[email]=ccc%40cc.com&user[username]=dsfcvx HTTP/1.1" 301 0
+"GET /api/recommend-products/?user[user_id]=12&user[email]=ccc%40cc.com&user[username]=dsfcvx HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=12&user[email]=ccc%40cc.com&user[username]=dsfcvx HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=12&user[email]=ccc%40cc.com&user[username]=dsfcvx HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=12&user[email]=ccc%40cc.com&user[username]=dsfcvx HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=12&user[email]=ccc%40cc.com&user[username]=dsfcvx HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=12&user[email]=ccc%40cc.com&user[username]=dsfcvx HTTP/1.1" 200 3368
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/products/ HTTP/1.1" 200 4034
+"POST /api/signup/ HTTP/1.1" 200 34
+"POST /api/login/ HTTP/1.1" 200 53
+"GET /api/recommend-products?user[user_id]=13&user[email]=mn%40mn.com&user[username]=mnmnm HTTP/1.1" 301 0
+"GET /api/recommend-products/?user[user_id]=13&user[email]=mn%40mn.com&user[username]=mnmnm HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=13&user[email]=mn%40mn.com&user[username]=mnmnm HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=13&user[email]=mn%40mn.com&user[username]=mnmnm HTTP/1.1" 200 3368
+"POST /api/match-user-products/ HTTP/1.1" 201 31
+"GET /api/match-user-products/ HTTP/1.1" 200 1435
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1435
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/recommend-products/?user[user_id]=13&user[email]=mn%40mn.com&user[username]=mnmnm HTTP/1.1" 200 3216
+"GET /api/recommend-products/?user[user_id]=13&user[email]=mn%40mn.com&user[username]=mnmnm HTTP/1.1" 200 3216
+"GET /api/recommend-products/?user[user_id]=13&user[email]=mn%40mn.com&user[username]=mnmnm HTTP/1.1" 200 3216
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1435
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1435
+"GET /api/recommend-products/?user[user_id]=13&user[email]=mn%40mn.com&user[username]=mnmnm HTTP/1.1" 200 3216
+"GET /api/recommend-products/?user[user_id]=13&user[email]=mn%40mn.com&user[username]=mnmnm HTTP/1.1" 200 3216
+"GET /api/recommend-products/?user[user_id]=13&user[email]=mn%40mn.com&user[username]=mnmnm HTTP/1.1" 200 3216
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1435
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1435
+"GET /api/recommend-products/?user[user_id]=13&user[email]=mn%40mn.com&user[username]=mnmnm HTTP/1.1" 200 3216
+"GET /api/recommend-products/?user[user_id]=13&user[email]=mn%40mn.com&user[username]=mnmnm HTTP/1.1" 200 3216
+"GET /api/recommend-products/?user[user_id]=13&user[email]=mn%40mn.com&user[username]=mnmnm HTTP/1.1" 200 3216
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/products/ HTTP/1.1" 200 4034
+"OPTIONS /api/signup/ HTTP/1.1" 200 0
+"POST /api/signup/ HTTP/1.1" 200 35
+"OPTIONS /api/login/ HTTP/1.1" 200 0
+"POST /api/login/ HTTP/1.1" 200 54
+"POST /api/login/ HTTP/1.1" 200 54
+"OPTIONS /api/users/14/ HTTP/1.1" 200 0
+Bad Request: /api/users/14/
+"PUT /api/users/14/ HTTP/1.1" 400 244
+Bad Request: /api/users/14/
+"PUT /api/users/14/ HTTP/1.1" 400 244
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/models.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/users/14/
+"PUT /api/users/14/ HTTP/1.1" 400 244
+Bad Request: /api/users/14/
+"PUT /api/users/14/ HTTP/1.1" 400 244
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/users/14/
+"PUT /api/users/14/ HTTP/1.1" 400 244
+Bad Request: /api/users/14/
+"PUT /api/users/14/ HTTP/1.1" 400 244
+Bad Request: /api/users/14/
+"PUT /api/users/14/ HTTP/1.1" 400 244
+Bad Request: /api/users/14/
+"PUT /api/users/14/ HTTP/1.1" 400 244
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /api/users/14/
+"PUT /api/users/14/ HTTP/1.1" 400 130
+Bad Request: /api/users/14/
+"PUT /api/users/14/ HTTP/1.1" 400 130
+"PUT /api/users/14/ HTTP/1.1" 200 353
+"GET /api/users/14/ HTTP/1.1" 200 353
+"OPTIONS /api/users/undefined/ HTTP/1.1" 200 0
+Not Found: /api/users/undefined/
+"PUT /api/users/undefined/ HTTP/1.1" 404 5626
+"POST /api/login/ HTTP/1.1" 200 54
+"PUT /api/users/14/ HTTP/1.1" 200 379
+"GET /api/users/14/ HTTP/1.1" 200 379
+"GET /api/users/14/ HTTP/1.1" 200 379
+Not Found: /api/users/undefined/
+"PUT /api/users/undefined/ HTTP/1.1" 404 5626
+Not Found: /api/users/undefined/
+"PUT /api/users/undefined/ HTTP/1.1" 404 5626
+Not Found: /api/users/undefined/
+"PUT /api/users/undefined/ HTTP/1.1" 404 5626
+"POST /api/login/ HTTP/1.1" 200 54
+"PUT /api/users/14/ HTTP/1.1" 200 382
+"PUT /api/users/14/ HTTP/1.1" 200 424
+"GET /api/users/14/ HTTP/1.1" 200 424
+"PUT /api/users/14/ HTTP/1.1" 200 424
+"PUT /api/users/14/ HTTP/1.1" 200 466
+"GET /api/recommend-products?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 301 0
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 3368
+"POST /api/match-user-products/ HTTP/1.1" 201 31
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 3218
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 3218
+"POST /api/match-user-products/ HTTP/1.1" 201 31
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+"POST /api/login/ HTTP/1.1" 200 54
+"POST /api/login/ HTTP/1.1" 200 54
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/topo/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/login/ HTTP/1.1" 200 239
+"POST /api/login/ HTTP/1.1" 200 239
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 3067
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 3067
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 3067
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 3067
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+Bad Request: /api/recommend-products/
+"GET /api/recommend-products/ HTTP/1.1" 400 39
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/products/ HTTP/1.1" 200 4034
+"POST /api/login/ HTTP/1.1" 200 239
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 3067
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 3067
+"POST /api/login/ HTTP/1.1" 200 239
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 3067
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 3067
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 3067
+"POST /api/match-user-products/ HTTP/1.1" 201 31
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1531
+"GET /api/match-user-products/ HTTP/1.1" 200 1531
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/match-user-products/ HTTP/1.1" 200 1531
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1531
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1531
+"GET /api/match-user-products/ HTTP/1.1" 200 1531
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1531
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1531
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1531
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1531
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1531
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1531
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930
+"GET /api/match-user-products/ HTTP/1.1" 200 1531
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1531
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22] HTTP/1.1" 200 2930

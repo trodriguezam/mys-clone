@@ -88,9 +88,9 @@ class Product(models.Model):
     precio_anterior = models.FloatField(verbose_name="Precio Anterior", null=True, blank=True)
     imagen_url = models.URLField(verbose_name="Imagen URL", null=True, blank=True)
     product_url = models.URLField(verbose_name="Producto URL", null=True, blank=True)
-    color = models.CharField(max_length=50, verbose_name="Color", null=True, blank=True)
-    marca = models.CharField(max_length=100, verbose_name="Marca", null=True, blank=True)
-    tipo = models.CharField(max_length=50, verbose_name="Tipo", null=True, blank=True)
+    color = models.JSONField(max_length=50, verbose_name="Color", null=True, blank=True)
+    marca = models.JSONField(max_length=100, verbose_name="Marca", null=True, blank=True)
+    tipo = models.JSONField(max_length=50, verbose_name="Tipo", null=True, blank=True)
     vendedor = models.ForeignKey(Shop, on_delete=models.CASCADE, verbose_name="Vendedor", null=True, blank=True)
     SIZES = ['XS', 'S', 'M', 'L', 'XL']
     size = models.CharField(

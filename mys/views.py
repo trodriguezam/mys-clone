@@ -25,7 +25,10 @@ class UserLogin(generics.GenericAPIView):
             return Response({
                 'user_id': user.pk,
                 'email': user.email,
-                'username': user.username
+                'username': user.username,
+                'preferred_colores': user.preferred_colores,
+                'preferred_tipos': user.preferred_tipos,
+                'preferred_marcas': user.preferred_marcas,
             })
         return Response({'detail': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
 
@@ -61,7 +64,7 @@ class UserRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
 
     def update(self, request, *args, **kwargs):
         # Enable partial update by setting partial=True
-        partial = kwargs.pop('partial', False)
+        partial = kwargs.pop('partial', True)
         return super().update(request, *args, partial=partial, **kwargs)
 
 class ShopListCreate(generics.ListCreateAPIView):

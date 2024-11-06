@@ -45,7 +45,11 @@ const Login = () => {
       const data = await response.json();
       console.log("Login successful:", data);
       localStorage.setItem('user', JSON.stringify(data));
+      if (!data.preferred_colores?.length || !data.preferred_marcas?.length || !data.preferred_tipos?.length) {
+        navigate('/preferences');
+      } else {
       navigate('/home');
+      }
       window.location.reload();
     } catch (error) {
       console.error("Error during login:", error);
