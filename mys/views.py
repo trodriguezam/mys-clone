@@ -9,6 +9,8 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from django.contrib.auth import authenticate
 from django.db.models import Q
+from django.shortcuts import get_object_or_404
+from rest_framework.exceptions import NotFound
 
 
 class UserLogin(generics.GenericAPIView):
@@ -40,6 +42,7 @@ class UserSignup(generics.CreateAPIView):
             'email': user.email
         })
 
+
 class CurrentUser(generics.RetrieveAPIView):
     def get_object(self):
         return self.request.user
@@ -55,6 +58,11 @@ class UserRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = [AllowAny]
+
+    def update(self, request, *args, **kwargs):
+        # Enable partial update by setting partial=True
+        partial = kwargs.pop('partial', False)
+        return super().update(request, *args, partial=partial, **kwargs)
 
 class ShopListCreate(generics.ListCreateAPIView):
     queryset = Shop.objects.all()
@@ -96,15 +104,21 @@ class RecommendProducts(APIView):
     permission_classes = [AllowAny]
 
     def get(self, request):
-        user = request.user
 
+        user_id = request.query_params.get('user[user_id]')
+        
+        if user_id:
+            try:
+                user = get_object_or_404(User, id=user_id)
+            except NotFound:
+                return Response({"error": "User not found"}, status=404)
+        else:
+            return Response({"error": "User information is missing"}, status=400)
+        
         # Retrieve user preferences
-        preferred_colores = user.get_preferred_colores()
-        preferred_colores = ["azul", "verde"]
-        preferred_tipos = user.get_preferred_tipos()
-        preferred_tipos = ["blusa"]
-        preferred_marcas = user.get_preferred_marcas()
-        preferred_marcas = ["MANGO"]
+        preferred_colores = user.get_preferred_colores() 
+        preferred_tipos = user.get_preferred_tipos() 
+        preferred_marcas = user.get_preferred_marcas() 
 
         # Set up filters for recommendations based on user preferences
         recommendation_filters = Q()
@@ -118,7 +132,6 @@ class RecommendProducts(APIView):
         if preferred_marcas:
             recommendation_filters |= Q(marca__in=preferred_marcas)
 
-        # Exclude products the user has already liked
         exclude_ids = MatchUserProduct.objects.filter(user=user).values_list('product_id', flat=True)
         recommendations = Product.objects.filter(
             recommendation_filters

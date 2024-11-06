@@ -44,7 +44,7 @@ const Login = () => {
 
       const data = await response.json();
       console.log("Login successful:", data);
-      localStorage.setItem('user', data.user_id);
+      localStorage.setItem('user', JSON.stringify(data));
       navigate('/home');
       window.location.reload();
     } catch (error) {

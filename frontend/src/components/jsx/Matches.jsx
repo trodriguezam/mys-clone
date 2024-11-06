@@ -10,8 +10,9 @@ function Matches() {
   const [productsMatch, setProductsMatch] = useState([]);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const current_user = JSON.parse(localStorage.getItem('current_user'));
-  const ID = parseInt(localStorage.getItem('user'), 10);
+  const user = JSON.parse(localStorage.getItem('user'));
+  const ID = user ? parseInt(user.user_id, 10) : null;
+
 
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
@@ -67,7 +68,7 @@ function Matches() {
     };
 
     ProductsMatch();
-  }, [products, matches, searchTerm]);
+  }, [products, matches, searchTerm, ID]);
 
   const handleChange = (event) => {
     setSearchTerm(event.target.value);

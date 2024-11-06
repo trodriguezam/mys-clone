@@ -1,14 +1,45 @@
 from rest_framework import serializers
 from .models import User, Shop, Product, MatchUserProduct
+from django.contrib.auth.models import User, Group, Permission
+from django.contrib.auth.hashers import make_password
 
 class UserSerializer(serializers.ModelSerializer):
-    preferred_colores = serializers.JSONField()
-    preferred_tipos = serializers.JSONField()
-    preferred_marcas = serializers.JSONField()
+    preferred_colores = serializers.JSONField(required=False)
+    preferred_tipos = serializers.JSONField(required=False)
+    preferred_marcas = serializers.JSONField(required=False)
+    email = serializers.EmailField(required=True)
+    username = serializers.CharField(required=True)
+    password = serializers.CharField(write_only=True, required=True)
+
+    groups = serializers.PrimaryKeyRelatedField(queryset=Group.objects.all(), many=True, required=False)
+    user_permissions = serializers.PrimaryKeyRelatedField(queryset=Permission.objects.all(), many=True, required=False)
 
     class Meta:
         model = User
-        fields = '__all__'
+        fields = [
+            'id', 'email', 'username', 'password', 'preferred_colores',
+            'preferred_tipos', 'preferred_marcas', 'groups', 'user_permissions'
+        ]
+
+    def create(self, validated_data):
+        # Remove and hash the password
+        password = validated_data.pop('password', None)
+        user = super().create(validated_data)
+        
+        if password:
+            user.set_password(password)
+        
+        # Set any custom fields, like preferences
+        if 'preferred_colores' in validated_data:
+            user.preferred_colores = validated_data['preferred_colores']
+        if 'preferred_tipos' in validated_data:
+            user.preferred_tipos = validated_data['preferred_tipos']
+        if 'preferred_marcas' in validated_data:
+            user.preferred_marcas = validated_data['preferred_marcas']
+        
+        user.save()
+        return user
+
 
 class ShopSerializer(serializers.ModelSerializer):
     class Meta:
@@ -25,32 +56,20 @@ class MatchUserProductSerializer(serializers.ModelSerializer):
         model = MatchUserProduct
         fields = '__all__'
 
+
 class UserSignupSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True)
-    preferred_colores = serializers.JSONField(required=False)
-    preferred_tipos = serializers.JSONField(required=False)
-    preferred_marcas = serializers.JSONField(required=False)
+    email = serializers.EmailField(required=True)
+    username = serializers.CharField(required=True)
+    password = serializers.CharField(write_only=True, required=True)
 
     class Meta:
         model = User
-        fields = ['email', 'username', 'password', 'phone', 'preferred_colores', 'preferred_tipos', 'preferred_marcas']
+        fields = ['email', 'username', 'password']
 
     def create(self, validated_data):
-        preferred_colores = validated_data.pop('preferred_colores', [])
-        preferred_tipos = validated_data.pop('preferred_tipos', [])
-        preferred_marcas = validated_data.pop('preferred_marcas', [])
-        
-        user = User.objects.create_user(
-            email=validated_data['email'],
-            username=validated_data['username'],
-            password=validated_data['password'],
-            phone=validated_data['phone'],
-        )
-        
-        user.set_preferred_colores(preferred_colores)
-        user.set_preferred_tipos(preferred_tipos)
-        user.set_preferred_marcas(preferred_marcas)
-        
+        # Hash the password before saving the user
+        validated_data['password'] = make_password(validated_data['password'])
+        user = User.objects.create(**validated_data)
         return user
 
 class UserLoginSerializer(serializers.Serializer):

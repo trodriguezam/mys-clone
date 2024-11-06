@@ -1,13 +1,14 @@
-from django.db import models
-from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin, Group, Permission
 import json
+from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, Group, Permission
+from django.db import models
+from django.contrib.auth.base_user import BaseUserManager
 
 class UserManager(BaseUserManager):
-    def create_user(self, email, username, password=None, **extra_fields):
+    def create_user(self, email, username, password=None, phone=None, **extra_fields):
         if not email:
             raise ValueError('The Email field must be set')
         email = self.normalize_email(email)
-        user = self.model(email=email, username=username, **extra_fields)
+        user = self.model(email=email, username=username, phone=phone, **extra_fields)
         user.set_password(password)
         user.save(using=self._db)
         return user
@@ -23,12 +24,20 @@ class User(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=50, unique=True)
     phone = models.CharField(max_length=50, null=True, blank=True)
     
-    preferred_colores = models.TextField(null=True, blank=True)  # Campo para almacenar colores preferidos
-    preferred_tipos = models.TextField(null=True, blank=True)  # Campo para almacenar tipos de ropa preferidos
-    preferred_marcas = models.TextField(null=True, blank=True)  # Campo para almacenar marcas preferidas
+    preferred_colores = models.TextField(null=True, blank=True)
+    preferred_tipos = models.TextField(null=True, blank=True)
+    preferred_marcas = models.TextField(null=True, blank=True)
     
-    groups = models.ManyToManyField(Group, related_name='custom_user_set')
-    user_permissions = models.ManyToManyField(Permission, related_name='custom_user_set')
+    groups = models.ManyToManyField(
+        Group,
+        related_name='custom_user_groups',  # Custom related name
+        blank=True
+    )
+    user_permissions = models.ManyToManyField(
+        Permission,
+        related_name='custom_user_permissions',  # Custom related name
+        blank=True
+    )
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
@@ -39,7 +48,8 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     def __str__(self):
         return self.username
-    
+
+    # Define the methods to set preferred colors, types, and brands
     def set_preferred_colores(self, colores):
         self.preferred_colores = json.dumps(colores)
         self.save()
@@ -52,20 +62,16 @@ class User(AbstractBaseUser, PermissionsMixin):
         self.preferred_marcas = json.dumps(marcas)
         self.save()
     
+    # Define getter methods to retrieve JSON fields as lists
     def get_preferred_colores(self):
-        if self.preferred_colores:
-            return json.loads(self.preferred_colores)
-        return []
+        return json.loads(self.preferred_colores) if self.preferred_colores else []
     
     def get_preferred_tipos(self):
-        if self.preferred_tipos:
-            return json.loads(self.preferred_tipos)
-        return []
-
+        return json.loads(self.preferred_tipos) if self.preferred_tipos else []
+    
     def get_preferred_marcas(self):
-        if self.preferred_marcas:
-            return json.loads(self.preferred_marcas)
-        return []
+        return json.loads(self.preferred_marcas) if self.preferred_marcas else []
+
 
 class Shop(models.Model):
     name = models.CharField(max_length=50)
