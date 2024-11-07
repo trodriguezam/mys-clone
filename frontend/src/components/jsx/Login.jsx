@@ -148,7 +148,7 @@ const Login = () => {
               <Typography color='black'>
                 <ErrorMessage name="password" component="div" />
               </Typography>
-              <Button type="submit" sx={{ backgroundColor: '#fd7b7b', '&:hover': { backgroundColor: '#51bdb6' }, mt: 2 }} variant="contained" fullWidth>
+              <Button type="submit" sx={{ color: "white", backgroundColor: '#fd7b7b', '&:hover': { backgroundColor: '#fd7b7b' }, mt: 2 }} variant="contained" fullWidth>
                 Login
               </Button>
             </Form>

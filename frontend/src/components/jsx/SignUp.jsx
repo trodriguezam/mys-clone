@@ -99,27 +99,27 @@ function SignupForm({ setCurrentUser }) {
                   fullWidth
                   margin="normal"
                   sx={{
-                    '& .MuiOutlinedInput-root': {
-                      '& fieldset': {
-                        borderColor: 'black', // Border color
-                      },
-                      '&:hover fieldset': {
-                        borderColor: '#51bdb6', // Border color on hover
-                      },
-                      '&.Mui-focused fieldset': {
-                        borderColor: '#51bdb6', // Border color when focused
-                      },
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: 'black', // Border color
                     },
-                    '& .MuiInputLabel-root': {
-                      color: 'black', // Label color
+                    '&:hover fieldset': {
+                      borderColor: '#fd7b7b', // Border color on hover
                     },
-                    '& .MuiInputLabel-root.Mui-focused': {
-                      color: '#51bdb6', // Label color when focused
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#fd7b7b', // Border color when focused
                     },
-                    '& .MuiOutlinedInput-input': {
-                      color: 'black', // Text color
-                    },
-                  }}
+                  },
+                  '& .MuiInputLabel-root': {
+                    color: 'black', // Label color
+                  },
+                  '& .MuiInputLabel-root.Mui-focused': {
+                    color: '#fd7b7b', // Label color when focused
+                  },
+                  '& .MuiOutlinedInput-input': {
+                    color: 'black', // Text color
+                  },
+                }}
                   InputLabelProps={{
                     style: { color: 'black' }, // Initial label color
                   }}
@@ -138,27 +138,27 @@ function SignupForm({ setCurrentUser }) {
                   fullWidth
                   margin="normal"
                   sx={{
-                    '& .MuiOutlinedInput-root': {
-                      '& fieldset': {
-                        borderColor: 'black', // Border color
-                      },
-                      '&:hover fieldset': {
-                        borderColor: '#51bdb6', // Border color on hover
-                      },
-                      '&.Mui-focused fieldset': {
-                        borderColor: '#51bdb6', // Border color when focused
-                      },
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: 'black', // Border color
                     },
-                    '& .MuiInputLabel-root': {
-                      color: 'black', // Label color
+                    '&:hover fieldset': {
+                      borderColor: '#fd7b7b', // Border color on hover
                     },
-                    '& .MuiInputLabel-root.Mui-focused': {
-                      color: '#51bdb6', // Label color when focused
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#fd7b7b', // Border color when focused
                     },
-                    '& .MuiOutlinedInput-input': {
-                      color: 'black', // Text color
-                    },
-                  }}
+                  },
+                  '& .MuiInputLabel-root': {
+                    color: 'black', // Label color
+                  },
+                  '& .MuiInputLabel-root.Mui-focused': {
+                    color: '#fd7b7b', // Label color when focused
+                  },
+                  '& .MuiOutlinedInput-input': {
+                    color: 'black', // Text color
+                  },
+                }}
                   InputLabelProps={{
                     style: { color: 'black' }, // Initial label color
                   }}
@@ -177,27 +177,27 @@ function SignupForm({ setCurrentUser }) {
                   fullWidth
                   margin="normal"
                   sx={{
-                    '& .MuiOutlinedInput-root': {
-                      '& fieldset': {
-                        borderColor: 'black', // Border color
-                      },
-                      '&:hover fieldset': {
-                        borderColor: '#51bdb6', // Border color on hover
-                      },
-                      '&.Mui-focused fieldset': {
-                        borderColor: '#51bdb6', // Border color when focused
-                      },
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: 'black', // Border color
                     },
-                    '& .MuiInputLabel-root': {
-                      color: 'black', // Label color
+                    '&:hover fieldset': {
+                      borderColor: '#fd7b7b', // Border color on hover
                     },
-                    '& .MuiInputLabel-root.Mui-focused': {
-                      color: '#51bdb6', // Label color when focused
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#fd7b7b', // Border color when focused
                     },
-                    '& .MuiOutlinedInput-input': {
-                      color: 'black', // Text color
-                    },
-                  }}
+                  },
+                  '& .MuiInputLabel-root': {
+                    color: 'black', // Label color
+                  },
+                  '& .MuiInputLabel-root.Mui-focused': {
+                    color: '#fd7b7b', // Label color when focused
+                  },
+                  '& .MuiOutlinedInput-input': {
+                    color: 'black', // Text color
+                  },
+                }}
                   InputLabelProps={{
                     style: { color: 'black' }, // Initial label color
                   }}
@@ -216,27 +216,27 @@ function SignupForm({ setCurrentUser }) {
                   fullWidth
                   margin="normal"
                   sx={{
-                    '& .MuiOutlinedInput-root': {
-                      '& fieldset': {
-                        borderColor: 'black', // Border color
-                      },
-                      '&:hover fieldset': {
-                        borderColor: '#51bdb6', // Border color on hover
-                      },
-                      '&.Mui-focused fieldset': {
-                        borderColor: '#51bdb6', // Border color when focused
-                      },
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: 'black', // Border color
                     },
-                    '& .MuiInputLabel-root': {
-                      color: 'black', // Label color
+                    '&:hover fieldset': {
+                      borderColor: '#fd7b7b', // Border color on hover
                     },
-                    '& .MuiInputLabel-root.Mui-focused': {
-                      color: '#51bdb6', // Label color when focused
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#fd7b7b', // Border color when focused
                     },
-                    '& .MuiOutlinedInput-input': {
-                      color: 'black', // Text color
-                    },
-                  }}
+                  },
+                  '& .MuiInputLabel-root': {
+                    color: 'black', // Label color
+                  },
+                  '& .MuiInputLabel-root.Mui-focused': {
+                    color: '#fd7b7b', // Label color when focused
+                  },
+                  '& .MuiOutlinedInput-input': {
+                    color: 'black', // Text color
+                  },
+                }}
                   InputLabelProps={{
                     style: { color: 'black' }, // Initial label color
                   }}
@@ -255,27 +255,27 @@ function SignupForm({ setCurrentUser }) {
                   fullWidth
                   margin="normal"
                   sx={{
-                    '& .MuiOutlinedInput-root': {
-                      '& fieldset': {
-                        borderColor: 'black', // Border color
-                      },
-                      '&:hover fieldset': {
-                        borderColor: '#51bdb6', // Border color on hover
-                      },
-                      '&.Mui-focused fieldset': {
-                        borderColor: '#51bdb6', // Border color when focused
-                      },
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: 'black', // Border color
                     },
-                    '& .MuiInputLabel-root': {
-                      color: 'black', // Label color
+                    '&:hover fieldset': {
+                      borderColor: '#fd7b7b', // Border color on hover
                     },
-                    '& .MuiInputLabel-root.Mui-focused': {
-                      color: '#51bdb6', // Label color when focused
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#fd7b7b', // Border color when focused
                     },
-                    '& .MuiOutlinedInput-input': {
-                      color: 'black', // Text color
-                    },
-                  }}
+                  },
+                  '& .MuiInputLabel-root': {
+                    color: 'black', // Label color
+                  },
+                  '& .MuiInputLabel-root.Mui-focused': {
+                    color: '#fd7b7b', // Label color when focused
+                  },
+                  '& .MuiOutlinedInput-input': {
+                    color: 'black', // Text color
+                  },
+                }}
                   InputLabelProps={{
                     style: { color: 'black' }, // Initial label color
                   }}
