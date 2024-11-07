@@ -919,3 +919,189 @@ Watching for file changes with StatReloader
 "GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22,%22blue%22,%22green%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22,%22pants%22,%22jackets%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22,%22nike%22,%22adidas%22] HTTP/1.1" 200 2930
 "POST /api/login/ HTTP/1.1" 200 300
 "GET /api/recommend-products/?user[user_id]=14&user[email]=zzzz%40z.com&user[username]=cvcvc&user[preferred_colores]=[%22azul%22,%22verde%22,%22azul%22,%22blue%22,%22green%22]&user[preferred_tipos]=[%22pantalon%22,%22blusa%22,%22pantalon%22,%22blusa%22,%22pants%22,%22jackets%22]&user[preferred_marcas]=[%22MANGO%22,%22ZARA%22,%22BASEMENT%22,%22MANGO%22,%22nike%22,%22adidas%22] HTTP/1.1" 200 2930
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"OPTIONS /api/login/ HTTP/1.1" 200 0
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/mys/views.py", line 23, in post
+    user = User.objects.get(email=serializer.validated_data['email'])
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+mys.models.User.DoesNotExist: User matching query does not exist.
+"POST /api/login/ HTTP/1.1" 500 102413
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/mys/views.py", line 23, in post
+    user = User.objects.get(email=serializer.validated_data['email'])
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+mys.models.User.DoesNotExist: User matching query does not exist.
+"POST /api/login/ HTTP/1.1" 500 102413
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/mys/views.py", line 23, in post
+    user = User.objects.get(email=serializer.validated_data['email'])
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+mys.models.User.DoesNotExist: User matching query does not exist.
+"POST /api/login/ HTTP/1.1" 500 102413
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/mys/views.py", line 23, in post
+    user = User.objects.get(email=serializer.validated_data['email'])
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+mys.models.User.DoesNotExist: User matching query does not exist.
+"POST /api/login/ HTTP/1.1" 500 102413
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/mys/views.py", line 23, in post
+    user = User.objects.get(email=serializer.validated_data['email'])
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+mys.models.User.DoesNotExist: User matching query does not exist.
+"POST /api/login/ HTTP/1.1" 500 102413
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/products/ HTTP/1.1" 200 4034
+"POST /api/login/ HTTP/1.1" 200 142
+"GET /api/recommend-products?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 301 0
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/match-user-products/ HTTP/1.1" 200 1623
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1623
+"GET /api/products/ HTTP/1.1" 200 4034
+Watching for file changes with StatReloader
+"POST /api/login/ HTTP/1.1" 200 142
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"POST /api/login/ HTTP/1.1" 200 142
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"POST /api/login/ HTTP/1.1" 200 142
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"POST /api/login/ HTTP/1.1" 200 142
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[]&user[preferred_tipos]=[]&user[preferred_marcas]=[%22BASEMENT%22] HTTP/1.1" 200 3368
+"OPTIONS /api/match-user-products/ HTTP/1.1" 200 0
+"POST /api/match-user-products/ HTTP/1.1" 201 30
+"POST /api/match-user-products/ HTTP/1.1" 201 30
+"POST /api/match-user-products/ HTTP/1.1" 201 30
+"POST /api/match-user-products/ HTTP/1.1" 201 30
+"GET /api/match-user-products/ HTTP/1.1" 200 1747
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1747
+"GET /api/products/ HTTP/1.1" 200 4034
+"OPTIONS /api/users/9/ HTTP/1.1" 200 0
+"PUT /api/users/9/ HTTP/1.1" 200 397
+"GET /api/recommend-products?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[%22blue%22,%22black%22]&user[preferred_tipos]=[%22jackets%22]&user[preferred_marcas]=[%22BASEMENT%22,%22nike%22] HTTP/1.1" 301 0
+"GET /api/recommend-products/?user[user_id]=9&user[email]=test3%40gmail.com&user[username]=test3&user[preferred_colores]=[%22blue%22,%22black%22]&user[preferred_tipos]=[%22jackets%22]&user[preferred_marcas]=[%22BASEMENT%22,%22nike%22] HTTP/1.1" 200 2578
+"POST /api/match-user-products/ HTTP/1.1" 201 30
+"POST /api/match-user-products/ HTTP/1.1" 201 30
+"POST /api/match-user-products/ HTTP/1.1" 201 31
