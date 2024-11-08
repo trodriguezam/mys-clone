@@ -38,7 +38,6 @@ const ProductSwiper = () => {
     }
   };
 
-
   const handleMatch = async (productId) => {
     try {
       await axiosInstance.post('/match-user-products/', { user: ID, product: productId });

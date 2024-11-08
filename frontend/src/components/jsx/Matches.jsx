@@ -79,7 +79,7 @@ function Matches() {
   };
 
   return (
-    ID ? (
+    user ? (
       <Container sx={{ height: '100vh', overflowY: 'auto', fontFamily: 'Montserrat, sans-serif', marginTop: "6%" }}>
         <Typography variant="h4" sx={{ fontFamily: "Montserrat, sans-serif", color: "#333", marginBottom: "1%" }}>
           Matches
