@@ -27,7 +27,7 @@ const ProductSwiper = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axiosInstance.get('/recommend-products', { params: { user: user } });
+      const response = await axiosInstance.post('/recommend-products/',  user );
       let data = response.data;
       setProducts(data.sort(() => Math.random() - 0.5));
       setCurrentIndex(0); // Reset index on new fetch
