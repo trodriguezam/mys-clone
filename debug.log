@@ -1105,3 +1105,128 @@ Watching for file changes with StatReloader
 "POST /api/match-user-products/ HTTP/1.1" 201 30
 "POST /api/match-user-products/ HTTP/1.1" 201 30
 "POST /api/match-user-products/ HTTP/1.1" 201 31
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2305
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2356
+Not Found: /users
+"GET /users HTTP/1.1" 404 2338
+Not Found: /users
+"GET /users HTTP/1.1" 404 2338
+Not Found: /products
+"GET /products HTTP/1.1" 404 2347
+Watching for file changes with StatReloader
+"GET /api/users HTTP/1.1" 301 0
+"GET /api/users/ HTTP/1.1" 200 23921
+"GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 200 3426
+"GET /static/rest_framework/css/default.css HTTP/1.1" 200 1152
+"GET /static/rest_framework/css/prettify.css HTTP/1.1" 200 817
+"GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 200 3796
+"GET /static/rest_framework/js/csrf.js HTTP/1.1" 200 1793
+"GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 200 13632
+"GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 200 39680
+"GET /static/rest_framework/js/default.js HTTP/1.1" 200 1268
+"GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 200 121457
+"GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 200 87533
+"GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 200 59
+"GET /static/rest_framework/img/grid.png HTTP/1.1" 200 1458
+"OPTIONS /api/login/ HTTP/1.1" 200 0
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/mys/views.py", line 23, in post
+    user = User.objects.get(email=serializer.validated_data['email'])
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+mys.models.User.DoesNotExist: User matching query does not exist.
+"POST /api/login/ HTTP/1.1" 500 102413
+Internal Server Error: /api/login/
+Traceback (most recent call last):
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/borjajuegos9/ISS/mys/views.py", line 23, in post
+    user = User.objects.get(email=serializer.validated_data['email'])
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/borjajuegos9/ISS/env/lib/python3.10/site-packages/django/db/models/query.py", line 649, in get
+    raise self.model.DoesNotExist(
+mys.models.User.DoesNotExist: User matching query does not exist.
+"POST /api/login/ HTTP/1.1" 500 102413
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/products/ HTTP/1.1" 200 4034
+"OPTIONS /api/signup/ HTTP/1.1" 200 0
+Bad Request: /api/signup/
+"POST /api/signup/ HTTP/1.1" 400 50
+Bad Request: /api/signup/
+"POST /api/signup/ HTTP/1.1" 400 50
+"POST /api/login/ HTTP/1.1" 200 129
+"OPTIONS /api/users/2/ HTTP/1.1" 200 0
+"PUT /api/users/2/ HTTP/1.1" 200 407
+"GET /api/recommend-products?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 301 0
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/products HTTP/1.1" 301 0
+"GET /api/products/ HTTP/1.1" 200 20931
+"GET /api/products?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 301 0
+"GET /api/products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 4034
+"GET /api/products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 4034
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/recommend-products/?user[user_id]=2&user[email]=b%40m.com&user[username]=borjajuegos9&user[preferred_colores]=[%22red%22,%22green%22]&user[preferred_tipos]=[%22jackets%22,%22pants%22]&user[preferred_marcas]=[%22basement%22,%22adidas%22] HTTP/1.1" 200 2
+"GET /api/match-user-products/ HTTP/1.1" 200 1841
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1841
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/products/ HTTP/1.1" 200 4034
+"POST /api/signup/ HTTP/1.1" 200 34
+"POST /api/login/ HTTP/1.1" 200 125
+"OPTIONS /api/users/10/ HTTP/1.1" 200 0
+"PUT /api/users/10/ HTTP/1.1" 200 382
+"GET /api/recommend-products?user[user_id]=10&user[email]=t%40est.com&user[username]=test4&user[preferred_colores]=[%22green%22]&user[preferred_tipos]=[%22shoes%22]&user[preferred_marcas]=[%22basement%22] HTTP/1.1" 301 0
+"GET /api/recommend-products/?user[user_id]=10&user[email]=t%40est.com&user[username]=test4&user[preferred_colores]=[%22green%22]&user[preferred_tipos]=[%22shoes%22]&user[preferred_marcas]=[%22basement%22] HTTP/1.1" 200 3368
