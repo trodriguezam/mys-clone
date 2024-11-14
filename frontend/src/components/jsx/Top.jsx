@@ -13,7 +13,7 @@ const Top = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('user'); // Remove user from local storage
-    window.location.reload(); // Reload the page to update the UI
+    navigate('/'); // Navigate to the login page// Reload the page to update the UI
   }
 
   return (

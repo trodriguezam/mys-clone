@@ -40,9 +40,6 @@ const validationSchema = yup.object({
 
 function SignupForm({ setCurrentUser }) {
   const navigate = useNavigate();
-  const [colores, setColores] = useState([]);
-  const [tipos, setTipos] = useState([]);
-  const [marcas, setMarcas] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -50,22 +47,8 @@ function SignupForm({ setCurrentUser }) {
       try {
         const response = await fetch('http://localhost:8000/api/products');
         let data = await response.json();
-        console.log('Products:', data);  // Debug
+        console.log('Products:', data); 
 
-        // Filtrar colores, tipos y marcas únicos
-        const uniqueColors = new Set();
-        const uniqueTypes = new Set();
-        const uniqueBrands = new Set();
-
-        data.forEach(product => {
-          if (product.color) uniqueColors.add(product.color);
-          if (product.tipo) uniqueTypes.add(product.tipo);
-          if (product.marca) uniqueBrands.add(product.marca);
-        });
-
-        setColores(Array.from(uniqueColors));
-        setTipos(Array.from(uniqueTypes));
-        setMarcas(Array.from(uniqueBrands));
         setLoading(false);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -85,7 +68,7 @@ function SignupForm({ setCurrentUser }) {
             Sign Up
           </Typography>
           <Formik
-            initialValues={{ username: '', email: '', phone: '', password: '', confirmPassword: '', preferred_colores: [], preferred_tipos: [], preferred_marcas: [] }}
+            initialValues={{ username: '', email: '', phone: '', password: '', confirmPassword: ''}}
             validationSchema={validationSchema}
             onSubmit={(values, { setSubmitting, isValid, validateForm }) => {
               console.log("values", values);
@@ -116,27 +99,27 @@ function SignupForm({ setCurrentUser }) {
                   fullWidth
                   margin="normal"
                   sx={{
-                    '& .MuiOutlinedInput-root': {
-                      '& fieldset': {
-                        borderColor: 'black', // Border color
-                      },
-                      '&:hover fieldset': {
-                        borderColor: '#51bdb6', // Border color on hover
-                      },
-                      '&.Mui-focused fieldset': {
-                        borderColor: '#51bdb6', // Border color when focused
-                      },
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: 'black', // Border color
                     },
-                    '& .MuiInputLabel-root': {
-                      color: 'black', // Label color
+                    '&:hover fieldset': {
+                      borderColor: '#fd7b7b', // Border color on hover
                     },
-                    '& .MuiInputLabel-root.Mui-focused': {
-                      color: '#51bdb6', // Label color when focused
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#fd7b7b', // Border color when focused
                     },
-                    '& .MuiOutlinedInput-input': {
-                      color: 'black', // Text color
-                    },
-                  }}
+                  },
+                  '& .MuiInputLabel-root': {
+                    color: 'black', // Label color
+                  },
+                  '& .MuiInputLabel-root.Mui-focused': {
+                    color: '#fd7b7b', // Label color when focused
+                  },
+                  '& .MuiOutlinedInput-input': {
+                    color: 'black', // Text color
+                  },
+                }}
                   InputLabelProps={{
                     style: { color: 'black' }, // Initial label color
                   }}
@@ -155,27 +138,27 @@ function SignupForm({ setCurrentUser }) {
                   fullWidth
                   margin="normal"
                   sx={{
-                    '& .MuiOutlinedInput-root': {
-                      '& fieldset': {
-                        borderColor: 'black', // Border color
-                      },
-                      '&:hover fieldset': {
-                        borderColor: '#51bdb6', // Border color on hover
-                      },
-                      '&.Mui-focused fieldset': {
-                        borderColor: '#51bdb6', // Border color when focused
-                      },
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: 'black', // Border color
                     },
-                    '& .MuiInputLabel-root': {
-                      color: 'black', // Label color
+                    '&:hover fieldset': {
+                      borderColor: '#fd7b7b', // Border color on hover
                     },
-                    '& .MuiInputLabel-root.Mui-focused': {
-                      color: '#51bdb6', // Label color when focused
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#fd7b7b', // Border color when focused
                     },
-                    '& .MuiOutlinedInput-input': {
-                      color: 'black', // Text color
-                    },
-                  }}
+                  },
+                  '& .MuiInputLabel-root': {
+                    color: 'black', // Label color
+                  },
+                  '& .MuiInputLabel-root.Mui-focused': {
+                    color: '#fd7b7b', // Label color when focused
+                  },
+                  '& .MuiOutlinedInput-input': {
+                    color: 'black', // Text color
+                  },
+                }}
                   InputLabelProps={{
                     style: { color: 'black' }, // Initial label color
                   }}
@@ -194,27 +177,27 @@ function SignupForm({ setCurrentUser }) {
                   fullWidth
                   margin="normal"
                   sx={{
-                    '& .MuiOutlinedInput-root': {
-                      '& fieldset': {
-                        borderColor: 'black', // Border color
-                      },
-                      '&:hover fieldset': {
-                        borderColor: '#51bdb6', // Border color on hover
-                      },
-                      '&.Mui-focused fieldset': {
-                        borderColor: '#51bdb6', // Border color when focused
-                      },
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: 'black', // Border color
                     },
-                    '& .MuiInputLabel-root': {
-                      color: 'black', // Label color
+                    '&:hover fieldset': {
+                      borderColor: '#fd7b7b', // Border color on hover
                     },
-                    '& .MuiInputLabel-root.Mui-focused': {
-                      color: '#51bdb6', // Label color when focused
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#fd7b7b', // Border color when focused
                     },
-                    '& .MuiOutlinedInput-input': {
-                      color: 'black', // Text color
-                    },
-                  }}
+                  },
+                  '& .MuiInputLabel-root': {
+                    color: 'black', // Label color
+                  },
+                  '& .MuiInputLabel-root.Mui-focused': {
+                    color: '#fd7b7b', // Label color when focused
+                  },
+                  '& .MuiOutlinedInput-input': {
+                    color: 'black', // Text color
+                  },
+                }}
                   InputLabelProps={{
                     style: { color: 'black' }, // Initial label color
                   }}
@@ -233,27 +216,27 @@ function SignupForm({ setCurrentUser }) {
                   fullWidth
                   margin="normal"
                   sx={{
-                    '& .MuiOutlinedInput-root': {
-                      '& fieldset': {
-                        borderColor: 'black', // Border color
-                      },
-                      '&:hover fieldset': {
-                        borderColor: '#51bdb6', // Border color on hover
-                      },
-                      '&.Mui-focused fieldset': {
-                        borderColor: '#51bdb6', // Border color when focused
-                      },
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: 'black', // Border color
                     },
-                    '& .MuiInputLabel-root': {
-                      color: 'black', // Label color
+                    '&:hover fieldset': {
+                      borderColor: '#fd7b7b', // Border color on hover
                     },
-                    '& .MuiInputLabel-root.Mui-focused': {
-                      color: '#51bdb6', // Label color when focused
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#fd7b7b', // Border color when focused
                     },
-                    '& .MuiOutlinedInput-input': {
-                      color: 'black', // Text color
-                    },
-                  }}
+                  },
+                  '& .MuiInputLabel-root': {
+                    color: 'black', // Label color
+                  },
+                  '& .MuiInputLabel-root.Mui-focused': {
+                    color: '#fd7b7b', // Label color when focused
+                  },
+                  '& .MuiOutlinedInput-input': {
+                    color: 'black', // Text color
+                  },
+                }}
                   InputLabelProps={{
                     style: { color: 'black' }, // Initial label color
                   }}
@@ -272,27 +255,27 @@ function SignupForm({ setCurrentUser }) {
                   fullWidth
                   margin="normal"
                   sx={{
-                    '& .MuiOutlinedInput-root': {
-                      '& fieldset': {
-                        borderColor: 'black', // Border color
-                      },
-                      '&:hover fieldset': {
-                        borderColor: '#51bdb6', // Border color on hover
-                      },
-                      '&.Mui-focused fieldset': {
-                        borderColor: '#51bdb6', // Border color when focused
-                      },
+                  '& .MuiOutlinedInput-root': {
+                    '& fieldset': {
+                      borderColor: 'black', // Border color
                     },
-                    '& .MuiInputLabel-root': {
-                      color: 'black', // Label color
+                    '&:hover fieldset': {
+                      borderColor: '#fd7b7b', // Border color on hover
                     },
-                    '& .MuiInputLabel-root.Mui-focused': {
-                      color: '#51bdb6', // Label color when focused
+                    '&.Mui-focused fieldset': {
+                      borderColor: '#fd7b7b', // Border color when focused
                     },
-                    '& .MuiOutlinedInput-input': {
-                      color: 'black', // Text color
-                    },
-                  }}
+                  },
+                  '& .MuiInputLabel-root': {
+                    color: 'black', // Label color
+                  },
+                  '& .MuiInputLabel-root.Mui-focused': {
+                    color: '#fd7b7b', // Label color when focused
+                  },
+                  '& .MuiOutlinedInput-input': {
+                    color: 'black', // Text color
+                  },
+                }}
                   InputLabelProps={{
                     style: { color: 'black' }, // Initial label color
                   }}
@@ -303,90 +286,6 @@ function SignupForm({ setCurrentUser }) {
                 <Typography color='black'>
                   <ErrorMessage name="confirmPassword" component="div" />
                 </Typography>
-                <Accordion>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography variant="p" sx={{ color: 'black' }}>
-                      Preferred Colors
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    {colores.map((color) => (
-                      <FormControlLabel
-                        key={color}
-                        control={
-                          <Checkbox
-                            checked={values.preferred_colores.includes(color)}
-                            onChange={(e) => {
-                              if (e.target.checked) {
-                                setFieldValue('preferred_colores', [...values.preferred_colores, color]);
-                              } else {
-                                setFieldValue('preferred_colores', values.preferred_colores.filter((c) => c !== color));
-                              }
-                            }}
-                            name="preferred_colores"
-                          />
-                        }
-                        label={color}
-                      />
-                    ))}
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography variant="p" sx={{ color: 'black' }}>
-                      Preferred Types
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    {tipos.map((tipo) => (
-                      <FormControlLabel
-                        key={tipo}
-                        control={
-                          <Checkbox
-                            checked={values.preferred_tipos.includes(tipo)}
-                            onChange={(e) => {
-                              if (e.target.checked) {
-                                setFieldValue('preferred_tipos', [...values.preferred_tipos, tipo]);
-                              } else {
-                                setFieldValue('preferred_tipos', values.preferred_tipos.filter((t) => t !== tipo));
-                              }
-                            }}
-                            name="preferred_tipos"
-                          />
-                        }
-                        label={tipo}
-                      />
-                    ))}
-                  </AccordionDetails>
-                </Accordion>
-                <Accordion>
-                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography variant="p" sx={{ color: 'black' }}>
-                      Preferred Brands
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    {marcas.map((marca) => (
-                      <FormControlLabel
-                        key={marca}
-                        control={
-                          <Checkbox
-                            checked={values.preferred_marcas.includes(marca)}
-                            onChange={(e) => {
-                              if (e.target.checked) {
-                                setFieldValue('preferred_marcas', [...values.preferred_marcas, marca]);
-                              } else {
-                                setFieldValue('preferred_marcas', values.preferred_marcas.filter((m) => m !== marca));
-                              }
-                            }}
-                            name="preferred_marcas"
-                          />
-                        }
-                        label={marca}
-                      />
-                    ))}
-                  </AccordionDetails>
-                </Accordion>
                 <Button type="submit" sx={{ backgroundColor: '#fd7b7b', '&:hover': { backgroundColor: '#fd7b7b' }, mt: 2 }} variant="contained" fullWidth>
                   Sign Up
                 </Button>

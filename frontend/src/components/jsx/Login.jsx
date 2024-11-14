@@ -45,7 +45,11 @@ const Login = () => {
       const data = await response.json();
       console.log("Login successful:", data);
       localStorage.setItem('user', JSON.stringify(data));
+      if (!data.preferred_colores?.length || !data.preferred_marcas?.length || !data.preferred_tipos?.length) {
+        navigate('/preferences');
+      } else {
       navigate('/home');
+      }
       window.location.reload();
     } catch (error) {
       console.error("Error during login:", error);
@@ -144,7 +148,7 @@ const Login = () => {
               <Typography color='black'>
                 <ErrorMessage name="password" component="div" />
               </Typography>
-              <Button type="submit" sx={{ backgroundColor: '#fd7b7b', '&:hover': { backgroundColor: '#51bdb6' }, mt: 2 }} variant="contained" fullWidth>
+              <Button type="submit" sx={{ color: "white", backgroundColor: '#fd7b7b', '&:hover': { backgroundColor: '#fd7b7b' }, mt: 2 }} variant="contained" fullWidth>
                 Login
               </Button>
             </Form>

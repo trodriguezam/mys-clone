@@ -8,67 +8,59 @@ const ProductSwiper = () => {
   const [dragStart, setDragStart] = useState(null);
   const [offset, setOffset] = useState(0);
   const [animation, setAnimation] = useState(null);
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')) || {});
+  const [user, setUser] = useState(null);
   const ID = user ? parseInt(user.user_id, 10) : null;
-  const [ready, setReady] = useState(true);
+  const [ready, setReady] = useState(false);
 
-  const [preferences, setPreferences] = useState({
-    colores: [],
-    tipos: [],
-    marcas: [],
-  });
+  const [preferencesColor, setPreferencesColor] = useState([]);
+  const [preferencesType, setPreferencesType] = useState([]);
+  const [preferencesBrand, setPreferencesBrand] = useState([]);
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
-    const storedPreferences = JSON.parse(localStorage.getItem('preferences'));
-  
+    console.log("storedUser: ", storedUser);
     if (storedUser) {
       setUser(storedUser);
-    }
-  
-    if (storedPreferences) {
-      setPreferences(storedPreferences);
-      if (storedPreferences.colores.length === 0 || storedPreferences.tipos.length === 0 || storedPreferences.marcas.length === 0) {
-        setReady(false);
-      } else {
-        setReady(true);
-      }
+      const colors_preference = JSON.parse(storedUser.preferred_colores || '[]');
+      const tipos_preferences = JSON.parse(storedUser.preferred_tipos || '[]');
+      const marcas_preferences = JSON.parse(storedUser.preferred_marcas || '[]');
+      console.log("preferences color: ", colors_preference);
+      console.log("preferences type: ", tipos_preferences);
+      console.log("preferences brand: ", marcas_preferences);
+      setPreferencesColor(colors_preference);
+      setPreferencesType(tipos_preferences);
+      setPreferencesBrand(marcas_preferences);
     }
   }, []);
 
   useEffect(() => {
-    const preferredColors = JSON.parse(user?.preferred_colores || "[]");
-    const preferredBrands = JSON.parse(user?.preferred_marcas || "[]");
-    const preferredTypes = JSON.parse(user?.preferred_tipos || "[]");
-  
-    const newPreferences = {
-      colores: preferredColors,
-      tipos: preferredTypes,
-      marcas: preferredBrands,
-    };
-  
-    setPreferences(newPreferences);
-  
-    if (preferredColors.length === 0 || preferredBrands.length === 0 || preferredTypes.length === 0) {
-      setReady(false);
-    } else {
-      setReady(true);
-    }
-
-    localStorage.setItem('preferences', JSON.stringify(newPreferences));
-  }, [user]);
-
-  useEffect(() => {
-    if (ready) {
+    if (user) {
       fetchProducts();
     }
-  }, [ready]);
+  }, [user]);
 
   const fetchProducts = async () => {
     try {
-      const response = await axiosInstance.get('/recommend-products', { params: { user: user } });
+      const response = await axiosInstance.post('/recommend-products/',  user );
       let data = response.data;
-      setProducts(data.sort(() => Math.random() - 0.5));
+      console.log("Data:", data);
+      // Ordenar productos según las preferencias del usuario
+      data.sort((a, b) => {
+        let scoreA = 0;
+        let scoreB = 0;
+
+        if (preferencesColor.includes(a.color)) scoreA++;
+        if (preferencesType.includes(a.tipo)) scoreA++;
+        if (preferencesBrand.includes(a.marca)) scoreA++;
+
+        if (preferencesColor.includes(b.color)) scoreB++;
+        if (preferencesType.includes(b.tipo)) scoreB++;
+        if (preferencesBrand.includes(b.marca)) scoreB++;
+
+        return scoreB - scoreA; // Ordenar de mayor a menor coincidencia
+      });
+      console.log("Products:", data);
+      setProducts(data);
       setCurrentIndex(0); // Reset index on new fetch
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -76,7 +68,6 @@ const ProductSwiper = () => {
       setReady(true);
     }
   };
-
 
   const handleMatch = async (productId) => {
     try {
@@ -119,65 +110,20 @@ const ProductSwiper = () => {
     }, 300);
   };
 
-  const handlePreferenceChange = (e) => {
-    const { name, value, checked } = e.target;
-    setPreferences((prev) => ({
-      ...prev,
-      [name]: checked ? [...prev[name], value] : prev[name].filter((pref) => pref !== value),
-    }));
-  };
-
-  const submitPreferences = async () => {
-    try {
-      await axiosInstance.put(`/users/${user.user_id}/`, {
-        preferred_colores: preferences.colores,
-        preferred_tipos: preferences.tipos,
-        preferred_marcas: preferences.marcas,
-      });
-      // Reload user data after saving preferences
-      const updatedUser = await axiosInstance.get(`/users/${user.user_id}/`);
-      localStorage.setItem('user', JSON.stringify(updatedUser.data));
-      setUser(updatedUser.data);
-      setReady(true);
-    } catch (error) {
-      console.error("Error updating preferences:", error);
-    }
-  };
-
-  if (!ready) {
-    return (
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '40vh', marginTop: "75px" }}>
-        <h1>Please update your preferences to view product recommendations.</h1>
-        <form onSubmit={(e) => { e.preventDefault(); submitPreferences(); }}>
-          <div>
-            <label>Select Colors:</label>
-            <label><input type="checkbox" name="colores" value="azul" onChange={handlePreferenceChange} /> Azul</label>
-            <label><input type="checkbox" name="colores" value="verde" onChange={handlePreferenceChange} /> Verde</label>
-            {/* Add other colors as needed */}
-          </div>
-          <div>
-            <label>Select Types:</label>
-            <label><input type="checkbox" name="tipos" value="blusa" onChange={handlePreferenceChange} /> Blusa</label>
-            <label><input type="checkbox" name="tipos" value="pantalon" onChange={handlePreferenceChange} /> Pantalón</label>
-            {/* Add other types as needed */}
-          </div>
-          <div>
-            <label>Select Brands:</label>
-            <label><input type="checkbox" name="marcas" value="MANGO" onChange={handlePreferenceChange} /> MANGO</label>
-            <label><input type="checkbox" name="marcas" value="ZARA" onChange={handlePreferenceChange} /> ZARA</label>
-            <label><input type="checkbox" name="marcas" value="BASEMENT" onChange={handlePreferenceChange} /> BASEMENT</label>
-            {/* Add other brands as needed */}
-          </div>
-          <button type="submit">Save Preferences</button>
-        </form>
-      </div>
-    );
-  }
-
   if (products.length === 0) return <div>Loading...</div>;
   if (currentIndex >= products.length) return <div>No more products available</div>;
 
   const currentProduct = products[currentIndex];
+
+  if (!ready) {
+    return (
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+        <div className="spinner-border text-primary" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', minHeight: '40vh', marginTop: "75px" }}>

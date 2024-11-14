@@ -7,6 +7,7 @@ import Matches from './components/jsx/Matches.jsx';
 import SignUp from './components/jsx/SignUp.jsx';
 import Login from './components/jsx/Login.jsx';
 import UserConfig from './components/jsx/userConfig.jsx';
+import Preferences from './components/jsx/Preferences.jsx';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/signup" element={< SignUp/>} />
         <Route path="/matches" element={<Matches />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/preferences" element={<Preferences />} />
         <Route path="*" element={<div><h1>Page Not Found</h1></div>} />
       </Routes>
       <Navbar />
