@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 
 # URL del sitio web que deseas hacer scraping
-url = "https://www.falabella.com/falabella-cl/collection/conjuntosmujer"
+url = "https://www.falabella.com/falabella-cl/search?Ntt=oakley+ropa"
 
 # Realizar la solicitud HTTP
 response = requests.get(url)
@@ -14,7 +14,7 @@ if response.status_code == 200:
     
     # Encontrar los elementos que deseas extraer (por ejemplo, nombres de productos)
     # Aquí podrías inspeccionar la página y buscar clases o tags específicos
-    productos_html = soup.find_all('div', class_='jsx-1068418086')
+    productos_html = soup.find_all('div', class_='jsx-1068418086 search-results-4-grid grid-pod')
     productos = {}
     productos_id = 0
     
@@ -65,5 +65,3 @@ if response.status_code == 200:
 else:
     print(f"Error al acceder a la página: {response.status_code}")
 print(productos)
-for i in productos:
-    print(i)

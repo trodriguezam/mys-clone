@@ -8,7 +8,9 @@
         "precio_anterior": null,
         "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883255809_1/width=240,height=240,quality=70,format=webp,fit=pad",
         "marca": "BASEMENT",
-        "vendedor": 1
+        "vendedor": 1,
+        "color": "",
+        "product_url": ""
       }
     },
     {
@@ -20,7 +22,9 @@
         "precio_anterior": null,
         "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883255636_01/width=240,height=240,quality=70,format=webp,fit=pad",
         "marca": "BASEMENT",
-        "vendedor": 1
+        "vendedor": 1,
+        "color": "",
+        "product_url": ""
       }
     },
     {
@@ -32,7 +36,9 @@
         "precio_anterior": null,
         "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17128630_01/width=240,height=240,quality=70,format=webp,fit=pad",
         "marca": "MANGO",
-        "vendedor": 1
+        "vendedor": 1,
+        "color": "",
+        "product_url": ""
       }
     },
     {
@@ -44,7 +50,9 @@
         "precio_anterior": null,
         "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883254715_01/width=240,height=240,quality=70,format=webp,fit=pad",
         "marca": "AMERICANINO",
-        "vendedor": 1
+        "vendedor": 1,
+        "color": "",
+        "product_url": ""
       }
     },
     {
@@ -56,7 +64,9 @@
         "precio_anterior": null,
         "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883254686_01/width=240,height=240,quality=70,format=webp,fit=pad",
         "marca": "AMERICANINO",
-        "vendedor": 1
+        "vendedor": 1,
+        "color": "",
+        "product_url": ""
       }
     },
     {
@@ -68,7 +78,9 @@
         "precio_anterior": null,
         "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883249111_1/width=240,height=240,quality=70,format=webp,fit=pad",
         "marca": "SYBILLA",
-        "vendedor": 1
+        "vendedor": 1,
+        "color": "",
+        "product_url": ""
       }
     },
     {
@@ -80,7 +92,9 @@
         "precio_anterior": null,
         "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883249614_02/width=240,height=240,quality=70,format=webp,fit=pad",
         "marca": "SYBILLA",
-        "vendedor": 1
+        "vendedor": 1,
+        "color": "",
+        "product_url": ""
       }
     },
     {
@@ -92,67 +106,1396 @@
         "precio_anterior": null,
         "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17128197_01/width=240,height=240,quality=70,format=webp,fit=pad",
         "marca": "MANGO",
-        "vendedor": 1
+        "vendedor": 1,
+        "color": "",
+        "product_url": ""
       }
     },
     {
       "model": "mys.Product",
-      "pk": 22,
+      "pk": 27,
       "fields": {
-        "descripcion": "Pantalón Fluido Estampado Mujer",
-        "precio_actual": 39990.0,
-        "precio_anterior": null,
-        "imagen_url": null,
-        "marca": "MANGO",
-        "vendedor": 1
+          "descripcion": "Polera Hombre Manga Corta Algodón",
+          "precio_actual": 12990.0,
+          "precio_anterior": 14990.0,
+          "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17181080/width=240,height=240,quality=70,format=webp,fit=pad",
+          "marca": "FROENS",
+          "vendedor": "Por Falabella",
+          "color": "",
+        "product_url": ""
       }
     },
     {
       "model": "mys.Product",
-      "pk": 23,
+      "pk": 28,
       "fields": {
-        "descripcion": "Blusa Sin Mangas Algodón Mujer",
-        "precio_actual": 29990.0,
-        "precio_anterior": null,
-        "imagen_url": null,
-        "marca": "BASEMENT",
-        "vendedor": 1
+          "descripcion": "Polera Hombre Manga Corta Algodón",
+          "precio_actual": 12990.0,
+          "precio_anterior": 14990.0,
+          "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17181099/width=240,height=240,quality=70,format=webp,fit=pad",
+          "marca": "FROENS",
+          "vendedor": "Por Falabella",
+          "color": "",
+        "product_url": ""
       }
     },
     {
       "model": "mys.Product",
-      "pk": 24,
+      "pk": 29,
       "fields": {
-        "descripcion": "Pantalón Palazzo Mujer",
-        "precio_actual": 24990.0,
-        "precio_anterior": null,
-        "imagen_url": null,
-        "marca": "BASEMENT",
-        "vendedor": 1
+          "descripcion": "Polerón Hombre",
+          "precio_actual": 29990.0,
+          "precio_anterior": 49990.0,
+          "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17180980/width=240,height=240,quality=70,format=webp,fit=pad",
+          "marca": "FROENS",
+          "vendedor": "Por Falabella",
+          "color": "",
+        "product_url": ""
       }
     },
     {
       "model": "mys.Product",
-      "pk": 25,
+      "pk": 30,
       "fields": {
-        "descripcion": "Pantalón Traje Lino Rayas Mujer",
-        "precio_actual": 59990.0,
-        "precio_anterior": null,
-        "imagen_url": null,
-        "marca": "MANGO",
-        "vendedor": 1
+          "descripcion": "Polerón Cuello Redondo Algodón Hombre",
+          "precio_actual": 27990.0,
+          "precio_anterior": 46990.0,
+          "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17181187/width=240,height=240,quality=70,format=webp,fit=pad",
+          "marca": "FROENS",
+          "vendedor": "Por Falabella",
+          "color": "",
+        "product_url": ""
       }
     },
     {
       "model": "mys.Product",
-      "pk": 26,
+      "pk": 31,
       "fields": {
-        "descripcion": "Pantalon Ancho, Tiro Alto, Crudo",
-        "precio_actual": 57990.0,
-        "precio_anterior": null,
-        "imagen_url": null,
-        "marca": "LIOLA",
-        "vendedor": 1
+          "descripcion": "Chaqueta mujer Corales camel",
+          "precio_actual": 69990.0,
+          "precio_anterior": null,
+          "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/133145787/width=240,height=240,quality=70,format=webp,fit=pad",
+          "marca": "FROENS",
+          "vendedor": "Por Froens",
+          "color": "",
+        "product_url": ""
       }
+    },
+    {
+      "model": "mys.Product",
+      "pk": 32,
+      "fields": {
+          "descripcion": "Polera Hombre Manga Corta Algodón",
+          "precio_actual": 19990.0,
+          "precio_anterior": null,
+          "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17181027/width=240,height=240,quality=70,format=webp,fit=pad",
+          "marca": "FROENS",
+          "vendedor": "Por Falabella",
+          "color": "",
+        "product_url": ""
+      }
+    },
+    {
+      "model": "mys.Product",
+      "pk": 33,
+      "fields": {
+          "descripcion": "Chaqueta Hombre",
+          "precio_actual": 47990.0,
+          "precio_anterior": 79990.0,
+          "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17181165/width=240,height=240,quality=70,format=webp,fit=pad",
+          "marca": "FROENS",
+          "vendedor": "Por Falabella",
+          "color": "",
+        "product_url": ""
+      }
+    },
+    {
+      "model": "mys.Product",
+      "pk": 34,
+      "fields": {
+          "descripcion": "Camisa Manga Corta Casual Hombre",
+          "precio_actual": 39990.0,
+          "precio_anterior": null,
+          "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17180924/width=240,height=240,quality=70,format=webp,fit=pad",
+          "marca": "FROENS",
+          "vendedor": "Por Falabella",
+          "color": "",
+        "product_url": ""
+      }
+    },
+    {
+      "model": "mys.Product",
+      "pk": 35,
+      "fields": {
+          "descripcion": "Jeans Flare Tiro Medio",
+          "precio_actual": 19990.0,
+          "precio_anterior": 29990.0,
+          "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883072786/width=240,height=240,quality=70,format=webp,fit=pad",
+          "marca": "AMERICANINO",
+          "vendedor": "Por Falabella",
+          "color": "",
+          "product_url": ""
+      }
+  },
+  {
+      "model": "mys.Product",
+      "pk": 36,
+      "fields": {
+          "descripcion": "Jeans Básico Tiro Súper Alto Mujer",
+          "precio_actual": 19990.0,
+          "precio_anterior": 29990.0,
+          "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/881605018/width=240,height=240,quality=70,format=webp,fit=pad",
+          "marca": "AMERICANINO",
+          "vendedor": "Por Falabella",
+          "color": "",
+          "product_url": ""
+      }
+  },
+  {
+      "model": "mys.Product",
+      "pk": 37,
+      "fields": {
+          "descripcion": "Falda Corta Denim Mujer",
+          "precio_actual": 19990.0,
+          "precio_anterior": 24990.0,
+          "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883252782/width=240,height=240,quality=70,format=webp,fit=pad",
+          "marca": "AMERICANINO",
+          "vendedor": "Por Falabella",
+          "color": "",
+          "product_url": ""
+      }
+  },
+  {
+      "model": "mys.Product",
+      "pk": 38,
+      "fields": {
+          "descripcion": "Jeans Tiro Alto Mujer",
+          "precio_actual": 19990.0,
+          "precio_anterior": 29990.0,
+          "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/882142887/width=240,height=240,quality=70,format=webp,fit=pad",
+          "marca": "AMERICANINO",
+          "vendedor": "Por Falabella",
+          "color": "",
+          "product_url": ""
+      }
+  },
+  {
+      "model": "mys.Product",
+      "pk": 39,
+      "fields": {
+          "descripcion": "Jeans Tiro Alto Mujer",
+          "precio_actual": 19990.0,
+          "precio_anterior": 29990.0,
+          "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/881659613/width=240,height=240,quality=70,format=webp,fit=pad",
+          "marca": "AMERICANINO",
+          "vendedor": "Por Falabella",
+          "color": "",
+          "product_url": ""
+      }
+  },
+  {
+      "model": "mys.Product",
+      "pk": 40,
+      "fields": {
+          "descripcion": "Pantalón Wide Leg Tiro Alto Mujer",
+          "precio_actual": 29990.0,
+          "precio_anterior": null,
+          "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883254947/width=240,height=240,quality=70,format=webp,fit=pad",
+          "marca": "AMERICANINO",
+          "vendedor": "Por Falabella",
+          "color": "",
+          "product_url": ""
+      }
+  },
+  {
+      "model": "mys.Product",
+      "pk": 41,
+      "fields": {
+          "descripcion": "Zapatillas Urbanas Mujer Cuero Blanco",
+          "precio_actual": 39990.0,
+          "precio_anterior": null,
+          "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/882430805/width=240,height=240,quality=70,format=webp,fit=pad",
+          "marca": "AMERICANINO",
+          "vendedor": "Por Falabella",
+          "color": "",
+          "product_url": ""
+      }
+  },
+  {
+      "model": "mys.Product",
+      "pk": 42,
+      "fields": {
+          "descripcion": "Pantalón Wide Leg Tiro Alto Mujer",
+          "precio_actual": 29990.0,
+          "precio_anterior": null,
+          "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883254680/width=240,height=240,quality=70,format=webp,fit=pad",
+          "marca": "AMERICANINO",
+          "vendedor": "Por Falabella",
+          "color": "",
+          "product_url": ""
+      }
+  },
+  {
+    "model": "mys.Product",
+    "pk": 43,
+    "fields": {
+        "descripcion": "Camisa Manga Corta Algodón Slim Fit Hombre",
+        "precio_actual": 54900.0,
+        "precio_anterior": null,
+        "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17221153/width=240,height=240,quality=70,format=webp,fit=pad",
+        "marca": "SAVILLE ROW",
+        "vendedor": "Por Falabella",
+        "color": "",
+        "product_url": ""
     }
-  ]
+},
+{
+    "model": "mys.Product",
+    "pk": 44,
+    "fields": {
+        "descripcion": "Camisa Manga Larga Algodón Slim Fit Hombre",
+        "precio_actual": 59900.0,
+        "precio_anterior": null,
+        "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17221127/width=240,height=240,quality=70,format=webp,fit=pad",
+        "marca": "SAVILLE ROW",
+        "vendedor": "Por Falabella",
+        "color": "",
+        "product_url": ""
+    }
+},
+{
+    "model": "mys.Product",
+    "pk": 45,
+    "fields": {
+        "descripcion": "Pantalón Mujer",
+        "precio_actual": 59900.0,
+        "precio_anterior": null,
+        "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/80036199/width=240,height=240,quality=70,format=webp,fit=pad",
+        "marca": "SAVILLE ROW",
+        "vendedor": "Por Falabella",
+        "color": "",
+        "product_url": ""
+    }
+},
+{
+    "model": "mys.Product",
+    "pk": 46,
+    "fields": {
+        "descripcion": "Camisa Manga Corta Algodón Slim Fit Hombre",
+        "precio_actual": 54900.0,
+        "precio_anterior": null,
+        "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17221093/width=240,height=240,quality=70,format=webp,fit=pad",
+        "marca": "SAVILLE ROW",
+        "vendedor": "Por Falabella",
+        "color": "",
+        "product_url": ""
+    }
+},
+{
+    "model": "mys.Product",
+    "pk": 47,
+    "fields": {
+        "descripcion": "Pantalón Capri Mujer",
+        "precio_actual": 54900.0,
+        "precio_anterior": null,
+        "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/80035655/width=240,height=240,quality=70,format=webp,fit=pad",
+        "marca": "SAVILLE ROW",
+        "vendedor": "Por Falabella",
+        "color": "",
+        "product_url": ""
+    }
+},
+{
+    "model": "mys.Product",
+    "pk": 48,
+    "fields": {
+        "descripcion": "Pantalón Mujer",
+        "precio_actual": 49900.0,
+        "precio_anterior": null,
+        "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/80035850/width=240,height=240,quality=70,format=webp,fit=pad",
+        "marca": "SAVILLE ROW",
+        "vendedor": "Por Falabella",
+        "color": "",
+        "product_url": ""
+    }
+},
+{
+    "model": "mys.Product",
+    "pk": 49,
+    "fields": {
+        "descripcion": "Polera Manga Corta Algodón Hombre",
+        "precio_actual": 21900.0,
+        "precio_anterior": null,
+        "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/16871343/width=240,height=240,quality=70,format=webp,fit=pad",
+        "marca": "SAVILLE ROW",
+        "vendedor": "Por Falabella",
+        "color": "",
+        "product_url": ""
+    }
+},
+{
+    "model": "mys.Product",
+    "pk": 50,
+    "fields": {
+        "descripcion": "Pantalón Mujer",
+        "precio_actual": 59900.0,
+        "precio_anterior": null,
+        "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/80035888/width=240,height=240,quality=70,format=webp,fit=pad",
+        "marca": "SAVILLE ROW",
+        "vendedor": "Por Falabella",
+        "color": "",
+        "product_url": ""
+    }
+},
+{
+  "model": "mys.Product",
+  "pk": 51,
+  "fields": {
+      "descripcion": "Air Force 1 07 Next Nature Zapatilla Urbana Mujer Blanco",
+      "precio_actual": 119990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/80008777/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "NIKE",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 52,
+  "fields": {
+      "descripcion": "Air Force 1 Shadow Zapatilla Urbana Mujer Blanco",
+      "precio_actual": 136990.0,
+      "precio_anterior": 139990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/11307716/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "NIKE",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 53,
+  "fields": {
+      "descripcion": "Air Force 1 07 Zapatilla Urbana Hombre Cuero Blanco",
+      "precio_actual": 83990.0,
+      "precio_anterior": 119990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/80052028/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "NIKE",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 54,
+  "fields": {
+      "descripcion": "Wmns Air Force 1 07 Ess Zapatilla Urbana Mujer Cuero Blanco",
+      "precio_actual": 119990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/80052452/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "NIKE",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 55,
+  "fields": {
+      "descripcion": "Air Force 1 07 Zapatilla Urbana Hombre Blanco",
+      "precio_actual": 119990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/80009183/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "NIKE",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 56,
+  "fields": {
+      "descripcion": "Air Force 1 07 Lv8 Zapatilla Urbana Hombre Negro",
+      "precio_actual": 129990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/80009187/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "NIKE",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 57,
+  "fields": {
+      "descripcion": "Wmns Initiator Zapatilla Urbana Mujer Blanco",
+      "precio_actual": 94990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/80008587/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "NIKE",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 58,
+  "fields": {
+      "descripcion": "Air Max Portal Zapatilla Urbana Mujer Blanco",
+      "precio_actual": 119990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/80008828/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "NIKE",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 59,
+  "fields": {
+      "descripcion": "Zapatillas Sambae Urbanas Mujer Blancas",
+      "precio_actual": 89990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/80260764/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "ADIDAS ORIGINALS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 60,
+  "fields": {
+      "descripcion": "Sambae Zapatilla Urbana Mujer Blanco",
+      "precio_actual": 89990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/80261915/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "ADIDAS ORIGINALS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 61,
+  "fields": {
+      "descripcion": "Ny 90 Zapatilla Urbana Hombre",
+      "precio_actual": 44990.0,
+      "precio_anterior": 69990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/50023547/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "ADIDAS ORIGINALS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 62,
+  "fields": {
+      "descripcion": "Forum Low Zapatilla Urbana Hombre Negro",
+      "precio_actual": 89990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/80135030/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "ADIDAS ORIGINALS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 63,
+  "fields": {
+      "descripcion": "Forum Mod Zapatilla Urbana Mujer Blanco",
+      "precio_actual": 109990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/50348383/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "ADIDAS ORIGINALS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 64,
+  "fields": {
+      "descripcion": "Forum Mid Zapatilla Urbana Hombre Blanco",
+      "precio_actual": 79890.0,
+      "precio_anterior": 109990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/14819413/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "ADIDAS ORIGINALS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 65,
+  "fields": {
+      "descripcion": "Stan Smith Cs Zapatilla Urbana Hombre Negro",
+      "precio_actual": 54990.0,
+      "precio_anterior": 74990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/50259678/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "ADIDAS ORIGINALS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 66,
+  "fields": {
+      "descripcion": "Stan Smith Zapatilla Urbana Mujer Blanco",
+      "precio_actual": 79990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/50348309/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "ADIDAS ORIGINALS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 67,
+  "fields": {
+      "descripcion": "Blusa Manga Larga Mujer",
+      "precio_actual": 9990.0,
+      "precio_anterior": 14990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883195419/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "UNIVERSITY CLUB",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 68,
+  "fields": {
+      "descripcion": "Blusa Manga Larga Mujer",
+      "precio_actual": 9990.0,
+      "precio_anterior": 14990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883195421/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "UNIVERSITY CLUB",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 69,
+  "fields": {
+      "descripcion": "Blusa Manga Larga Mujer",
+      "precio_actual": 9990.0,
+      "precio_anterior": 14990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883195435/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "UNIVERSITY CLUB",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 70,
+  "fields": {
+      "descripcion": "Pantalón Recto Tiro Medio Mujer",
+      "precio_actual": 13990.0,
+      "precio_anterior": 19990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883184319/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "UNIVERSITY CLUB",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 71,
+  "fields": {
+      "descripcion": "Pantalón Pijamero Wide Leg Tiro Alto",
+      "precio_actual": 14990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883248480/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "UNIVERSITY CLUB",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 72,
+  "fields": {
+      "descripcion": "Pantalón Pijamero Wide Leg Tiro Alto",
+      "precio_actual": 14990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883248475/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "UNIVERSITY CLUB",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 73,
+  "fields": {
+      "descripcion": "Pantalón Pijamero Wide Leg Tiro Alto",
+      "precio_actual": 14990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883248466/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "UNIVERSITY CLUB",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 74,
+  "fields": {
+      "descripcion": "Pantalón Pijamero Wide Leg Tiro Alto",
+      "precio_actual": 14990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883248478/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "UNIVERSITY CLUB",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 75,
+  "fields": {
+      "descripcion": "Cartera Mujer con Diseño Calado",
+      "precio_actual": 79990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17113958/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "DESIGUAL",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 76,
+  "fields": {
+      "descripcion": "Vestido Midi Combinado M. Christian Lacroix Mujer",
+      "precio_actual": 97990.0,
+      "precio_anterior": 134990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17113808/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "DESIGUAL",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 77,
+  "fields": {
+      "descripcion": "Cartera de Mujer con Bordado",
+      "precio_actual": 64990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17113930/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "DESIGUAL",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 78,
+  "fields": {
+      "descripcion": "Cartera Mujer",
+      "precio_actual": 64990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17114068/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "DESIGUAL",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 79,
+  "fields": {
+      "descripcion": "Vestido Flores Arty Mujer",
+      "precio_actual": 89990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17113817/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "DESIGUAL",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 80,
+  "fields": {
+      "descripcion": "Vestido Midi Camisero M. Christian Lacroix Mujer",
+      "precio_actual": 71990.0,
+      "precio_anterior": 144990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17113837/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "DESIGUAL",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 81,
+  "fields": {
+      "descripcion": "Bandolera S Logo Mujer",
+      "precio_actual": 64990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17113840/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "DESIGUAL",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 82,
+  "fields": {
+      "descripcion": "Vestido Midi Marmoleado M. Christian Lacroix Mujer",
+      "precio_actual": 118990.0,
+      "precio_anterior": 164990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17113906/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "DESIGUAL",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 84,
+  "fields": {
+      "descripcion": "Blusa Manga Larga Algodón Mujer",
+      "precio_actual": 36990.0,
+      "precio_anterior": 52990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/50364295/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "LEVIS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 85,
+  "fields": {
+      "descripcion": "Jeans Straight Tiro Alto Mujer 501 Original Fit",
+      "precio_actual": 59990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/50363806/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "LEVIS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 86,
+  "fields": {
+      "descripcion": "Chaqueta Mujer",
+      "precio_actual": 55990.0,
+      "precio_anterior": 79990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17171157/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "LEVIS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 87,
+  "fields": {
+      "descripcion": "Chaqueta Mujer",
+      "precio_actual": 50990.0,
+      "precio_anterior": 72990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/50258954/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "LEVIS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 88,
+  "fields": {
+      "descripcion": "Jeans Recto Tiro Medio Mujer 314 Shaping Straight",
+      "precio_actual": 46990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/15923573/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "LEVIS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 89,
+  "fields": {
+      "descripcion": "Jeans Straight Tiro Medio Mujer",
+      "precio_actual": 59990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17170727/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "LEVIS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 90,
+  "fields": {
+      "descripcion": "Jeans Straight Tiro Medio Mujer",
+      "precio_actual": 59990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17170857/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "LEVIS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 91,
+  "fields": {
+      "descripcion": "Polera Manga Corta Algodón Mujer",
+      "precio_actual": 16990.0,
+      "precio_anterior": 19990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/50364133/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "LEVIS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 92,
+  "fields": {
+      "descripcion": "Polera Manga Corta Algodón Hombre",
+      "precio_actual": 54990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883164011/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "LA MARTINA",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 93,
+  "fields": {
+      "descripcion": "Calcetín Vestir Algodón Premium Hombre",
+      "precio_actual": 8990.0,
+      "precio_anterior": 12990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/882393477/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "LA MARTINA",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 94,
+  "fields": {
+      "descripcion": "Camisa Manga Larga Casual Regular Fit Hombre",
+      "precio_actual": 59990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883123540/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "LA MARTINA",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 95,
+  "fields": {
+      "descripcion": "Camisa Manga Larga Check Hombre",
+      "precio_actual": 59990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883123145/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "LA MARTINA",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 96,
+  "fields": {
+      "descripcion": "Camisa Manga Larga Check Hombre",
+      "precio_actual": 59990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883123328/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "LA MARTINA",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 97,
+  "fields": {
+      "descripcion": "Zapatilla Urbana Hombre Azul",
+      "precio_actual": 49990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/882740528/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "LA MARTINA",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 98,
+  "fields": {
+      "descripcion": "Polera Manga Corta Cuello Pique Hombre",
+      "precio_actual": 34990.0,
+      "precio_anterior": 44990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883159292/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "LA MARTINA",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 99,
+  "fields": {
+      "descripcion": "Polera Manga Corta Cuello Redondo Hombre",
+      "precio_actual": 24990.0,
+      "precio_anterior": 29990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883159201/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "LA MARTINA",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 100,
+  "fields": {
+      "descripcion": "Sweater Hombre",
+      "precio_actual": 39990.0,
+      "precio_anterior": 79990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883151515/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "TOMMY HILFIGER",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 101,
+  "fields": {
+      "descripcion": "Polera Pijama Manga Corta Hombre",
+      "precio_actual": 15990.0,
+      "precio_anterior": 24990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/882813074/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "TOMMY HILFIGER",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 102,
+  "fields": {
+      "descripcion": "Short Pijama Hombre",
+      "precio_actual": 15990.0,
+      "precio_anterior": 29990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/882813070/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "TOMMY HILFIGER",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 103,
+  "fields": {
+      "descripcion": "Parka Regular Fit Hombre",
+      "precio_actual": 51990.0,
+      "precio_anterior": 129990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/882869740/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "TOMMY HILFIGER",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 104,
+  "fields": {
+      "descripcion": "Polar Hombre",
+      "precio_actual": 39990.0,
+      "precio_anterior": 79990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883151601/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "TOMMY HILFIGER",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 105,
+  "fields": {
+      "descripcion": "Chaqueta Impermeable Hombre",
+      "precio_actual": 59990.0,
+      "precio_anterior": 119990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/883151647/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "TOMMY HILFIGER",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 106,
+  "fields": {
+      "descripcion": "TOMMY MEN EDT 100ML",
+      "precio_actual": 39990.0,
+      "precio_anterior": 72990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/130611083/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "TOMMY HILFIGER",
+      "vendedor": "Por Silk Perfumes",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 107,
+  "fields": {
+      "descripcion": "Jockey Hombre",
+      "precio_actual": 16990.0,
+      "precio_anterior": 29990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/882795654/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "TOMMY HILFIGER",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 108,
+  "fields": {
+      "descripcion": "Zapatilla Urbana Mujer Cuero Negro",
+      "precio_actual": 159990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17152255/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "MICHAEL KORS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 109,
+  "fields": {
+      "descripcion": "Zapatilla Urbana Mujer Cuero Dorado",
+      "precio_actual": 139990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17152263/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "MICHAEL KORS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 110,
+  "fields": {
+      "descripcion": "Sandalia Mujer Cuero Negro",
+      "precio_actual": 139990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17152047/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "MICHAEL KORS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 111,
+  "fields": {
+      "descripcion": "Sandalia Mujer Cuero Negro",
+      "precio_actual": 159990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17061561/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "MICHAEL KORS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 112,
+  "fields": {
+      "descripcion": "Sandalia Plana Mujer Plateado",
+      "precio_actual": 99990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17152301/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "MICHAEL KORS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 113,
+  "fields": {
+      "descripcion": "Hawaiana Mujer Negro",
+      "precio_actual": 94990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17152204/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "MICHAEL KORS",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 114,
+  "fields": {
+      "descripcion": "Reloj Classic MK3369 Oro Rosa",
+      "precio_actual": 116990.0,
+      "precio_anterior": 212710.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/124540441/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "MICHAEL KORS",
+      "vendedor": "Por Tempo Di Tutti",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 115,
+  "fields": {
+      "descripcion": "Reloj Parker MK6119 Blanco",
+      "precio_actual": 139990.0,
+      "precio_anterior": 254528.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/124533248/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "MICHAEL KORS",
+      "vendedor": "Por Tempo Di Tutti",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 117,
+  "fields": {
+      "descripcion": "Polerón Casual Algodón Hombre",
+      "precio_actual": 23990.0,
+      "precio_anterior": 39990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17206774/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "KAYA UNITE",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 118,
+  "fields": {
+      "descripcion": "Polerón Casual Algodón Hombre",
+      "precio_actual": 26990.0,
+      "precio_anterior": 44990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17206804/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "KAYA UNITE",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 119,
+  "fields": {
+      "descripcion": "Polerón Hombre",
+      "precio_actual": 23990.0,
+      "precio_anterior": 39990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17177595/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "KAYA UNITE",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 120,
+  "fields": {
+      "descripcion": "Camisa Manga Corta Viscosa Hombre",
+      "precio_actual": 36990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17206469/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "KAYA UNITE",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 121,
+  "fields": {
+      "descripcion": "Parka Regular Hombre",
+      "precio_actual": 29990.0,
+      "precio_anterior": 59990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17106857/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "KAYA UNITE",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 122,
+  "fields": {
+      "descripcion": "Camisa Manga Corta Hombre",
+      "precio_actual": 36990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17206410/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "KAYA UNITE",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 123,
+  "fields": {
+      "descripcion": "Camisa Manga Corta Hombre",
+      "precio_actual": 36990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/17206422/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "KAYA UNITE",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 124,
+  "fields": {
+      "descripcion": "Camisa Casual Manga Corta Viscosa Hombre",
+      "precio_actual": 17990.0,
+      "precio_anterior": 36990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/16135757/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "KAYA UNITE",
+      "vendedor": "Por Falabella",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 125,
+  "fields": {
+      "descripcion": "Polera O Bark Hombre Blanco",
+      "precio_actual": 19990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/119762247/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "OAKLEY",
+      "vendedor": "Por The Lab",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 126,
+  "fields": {
+      "descripcion": "Polera O Bark 2.0 Hombre Blackout",
+      "precio_actual": 21990.0,
+      "precio_anterior": null,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/119761708/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "OAKLEY",
+      "vendedor": "Por The Lab",
+      "color": "",
+      "product_url": ""
+  }
+},
+{
+  "model": "mys.Product",
+  "pk": 127,
+  "fields": {
+      "descripcion": "Polera 2.0 Hombre Dark Gray Heather",
+      "precio_actual": 15393.0,
+      "precio_anterior": 21990.0,
+      "imagen_url": "https://www.falabella.com/cdn-cgi/imagedelivery/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/119762038/width=240,height=240,quality=70,format=webp,fit=pad",
+      "marca": "OAKLEY",
+      "vendedor": "Por The Lab",
+      "color": "",
+      "product_url": ""
+  }
+}
+
+]
