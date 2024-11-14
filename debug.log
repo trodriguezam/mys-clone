@@ -1230,3 +1230,46 @@ Bad Request: /api/signup/
 "PUT /api/users/10/ HTTP/1.1" 200 382
 "GET /api/recommend-products?user[user_id]=10&user[email]=t%40est.com&user[username]=test4&user[preferred_colores]=[%22green%22]&user[preferred_tipos]=[%22shoes%22]&user[preferred_marcas]=[%22basement%22] HTTP/1.1" 301 0
 "GET /api/recommend-products/?user[user_id]=10&user[email]=t%40est.com&user[username]=test4&user[preferred_colores]=[%22green%22]&user[preferred_tipos]=[%22shoes%22]&user[preferred_marcas]=[%22basement%22] HTTP/1.1" 200 3368
+/home/borjajuegos9/ISS/mys/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /api/login/ HTTP/1.1" 200 155
+"OPTIONS /api/recommend-products/ HTTP/1.1" 200 0
+"POST /api/recommend-products/ HTTP/1.1" 200 1721
+"OPTIONS /api/match-user-products/ HTTP/1.1" 200 0
+Bad Request: /api/match-user-products/
+"POST /api/match-user-products/ HTTP/1.1" 400 36
+"GET /api/match-user-products/ HTTP/1.1" 200 1841
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1841
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1841
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1841
+"GET /api/products/ HTTP/1.1" 200 4034
+"POST /api/recommend-products/ HTTP/1.1" 200 1445
+Bad Request: /api/match-user-products/
+"POST /api/match-user-products/ HTTP/1.1" 400 36
+Bad Request: /api/match-user-products/
+"POST /api/match-user-products/ HTTP/1.1" 400 36
+"GET /api/match-user-products/ HTTP/1.1" 200 1841
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1841
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1841
+"GET /api/match-user-products/ HTTP/1.1" 200 1841
+"GET /api/products/ HTTP/1.1" 200 4034
+"POST /api/recommend-products/ HTTP/1.1" 200 1461
+"POST /api/match-user-products/ HTTP/1.1" 201 32
+"POST /api/match-user-products/ HTTP/1.1" 201 31
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1906
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1906
+"POST /api/recommend-products/ HTTP/1.1" 200 1580
+"POST /api/match-user-products/ HTTP/1.1" 201 31
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1938
+"GET /api/products/ HTTP/1.1" 200 4034
+"GET /api/match-user-products/ HTTP/1.1" 200 1938
+"POST /api/recommend-products/ HTTP/1.1" 200 1578
