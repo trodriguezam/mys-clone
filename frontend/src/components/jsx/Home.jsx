@@ -9,13 +9,25 @@ const ProductSwiper = () => {
   const [offset, setOffset] = useState(0);
   const [animation, setAnimation] = useState(null);
   const [user, setUser] = useState(null);
-  const ID = user ? parseInt(user.user_id, 10) : null;
   const [ready, setReady] = useState(false);
+  const [preferencesColor, setPreferencesColor] = useState([]);
+  const [preferencesType, setPreferencesType] = useState([]);
+  const [preferencesBrand, setPreferencesBrand] = useState([]);
 
   useEffect(() => {
     const storedUser = JSON.parse(localStorage.getItem('user'));
+    console.log("storedUser: ", storedUser);
     if (storedUser) {
       setUser(storedUser);
+      const colors_preference = JSON.parse(storedUser.preferred_colores || '[]');
+      const tipos_preferences = JSON.parse(storedUser.preferred_tipos || '[]');
+      const marcas_preferences = JSON.parse(storedUser.preferred_marcas || '[]');
+      console.log("preferences color: ", colors_preference);
+      console.log("preferences type: ", tipos_preferences);
+      console.log("preferences brand: ", marcas_preferences);
+      setPreferencesColor(colors_preference);
+      setPreferencesType(tipos_preferences);
+      setPreferencesBrand(marcas_preferences);
     }
   }, []);
 
@@ -29,7 +41,24 @@ const ProductSwiper = () => {
     try {
       const response = await axiosInstance.get('/recommend-products', { params: { user: user } });
       let data = response.data;
-      setProducts(data.sort(() => Math.random() - 0.5));
+      console.log("Data:", data);
+      // Ordenar productos según las preferencias del usuario
+      data.sort((a, b) => {
+        let scoreA = 0;
+        let scoreB = 0;
+
+        if (preferencesColor.includes(a.color)) scoreA++;
+        if (preferencesType.includes(a.tipo)) scoreA++;
+        if (preferencesBrand.includes(a.marca)) scoreA++;
+
+        if (preferencesColor.includes(b.color)) scoreB++;
+        if (preferencesType.includes(b.tipo)) scoreB++;
+        if (preferencesBrand.includes(b.marca)) scoreB++;
+
+        return scoreB - scoreA; // Ordenar de mayor a menor coincidencia
+      });
+      console.log("Products:", data);
+      setProducts(data);
       setCurrentIndex(0); // Reset index on new fetch
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -40,7 +69,7 @@ const ProductSwiper = () => {
 
   const handleMatch = async (productId) => {
     try {
-      await axiosInstance.post('/match-user-products/', { user: ID, product: productId });
+      await axiosInstance.post('/match-user-products/', { user: user.id, product: productId });
     } catch (error) {
       console.error("Error matching product:", error);
     }
