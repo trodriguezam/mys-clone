@@ -39,7 +39,7 @@ const ProductSwiper = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axiosInstance.get('/recommend-products', { params: { user: user } });
+      const response = await axiosInstance.get('/products', { params: { user: user } });
       let data = response.data;
       console.log("Data:", data);
       // Ordenar productos según las preferencias del usuario
