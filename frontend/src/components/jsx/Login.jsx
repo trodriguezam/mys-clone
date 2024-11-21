@@ -30,7 +30,7 @@ const Login = () => {
   const handleLogin = async (values) => {
     console.log("Login values:", values); // Verificar los datos enviados
     try {
-      const response = await fetch('http://localhost:8000/api/login/', {
+      const response = await fetch('https://mys-backend-de75ad11f796.herokuapp.com/api/login/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
