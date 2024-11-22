@@ -30,6 +30,16 @@
             "email": "falabella@falabella.cl"
         }
     },
+    {
+      "model": "mys.Shop",
+      "pk" : 2,
+      "fields": {
+          "name": "Froens",
+          "address": "Av.Las Condes 123",
+          "phone": "123456789",
+          "email": "froens@froens.cl"
+      }
+    },
     
         {
           "model": "mys.Product",
