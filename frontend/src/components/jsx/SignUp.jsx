@@ -45,7 +45,7 @@ function SignupForm({ setCurrentUser }) {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/products');
+        const response = await fetch('https://mys-backend-de75ad11f796.herokuapp.com/api/products');
         let data = await response.json();
         console.log('Products:', data); 
 

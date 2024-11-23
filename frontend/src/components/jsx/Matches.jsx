@@ -21,7 +21,7 @@ function Matches() {
   useEffect(() => {
     const fetchMatches = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/match-user-products`);
+        const response = await fetch(`https://mys-backend-de75ad11f796.herokuapp.com/api/match-user-products`);
         const data = await response.json();
         setMatches(data);
         console.log('matches:', data);  // Debug
@@ -36,7 +36,7 @@ function Matches() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/api/products`);
+        const response = await fetch(`https://mys-backend-de75ad11f796.herokuapp.com/api/products`);
         const data = await response.json();
         setProducts(data);
         console.log('Products:', data);  // Debug
